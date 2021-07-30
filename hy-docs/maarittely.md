@@ -38,3 +38,5 @@ Seuraavaksi on tarkoitus kehittää algoritmia siten, että se dynaamisesti muut
 Mielekkäiden testien kirjoittaminen algoritmille on mietityttänyt. Helppoahan on tietenkin kirjoittaa testejä, joissa testataan, että palauttaako algoritmi ylipäätänsä siirron tilanteessa jossa siirtoja voi tehdä, ja että onko siirto laillinen. Jälkimmäinen tosin ei liity itse algoritmiin vaan pikemminkin pelin logiikkaan joka tuottaa laillisia siirtoja tilasta. Luultavasti tyydyn testaamaan algoritmia siten, että se pärjää riittävän hyvin satunnaisesti pelaavaa vastaan.
 
 Testikattavuuden seuranta on toteutettu jo, mutta seuraava vaihe on saada ne codecovin kautta myös Githubiin esille.
+
+Käytetty tuntimäärä: paljon.
