@@ -1,0 +1,75 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		09B0AABE26B45500003571A8 /* CheckersLibrary */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CheckersLibrary; sourceTree = "<group>"; };
+		09B0AABF26B4550E003571A8 /* CheckersAppCLI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CheckersAppCLI; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		09B0AAB726B4548E003571A8 = {
+			isa = PBXGroup;
+			children = (
+				09B0AABF26B4550E003571A8 /* CheckersAppCLI */,
+				09B0AABE26B45500003571A8 /* CheckersLibrary */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		09B0AAB826B4548E003571A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 09B0AABB26B4548E003571A8 /* Build configuration list for PBXProject "Checkers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09B0AAB726B4548E003571A8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		09B0AABC26B4548E003571A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		09B0AABD26B4548E003571A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09B0AABB26B4548E003571A8 /* Build configuration list for PBXProject "Checkers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B0AABC26B4548E003571A8 /* Debug */,
+				09B0AABD26B4548E003571A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09B0AAB826B4548E003571A8 /* Project object */;
+}

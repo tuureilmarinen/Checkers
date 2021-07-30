@@ -1,0 +1,4 @@
+coverage_service: cobertura_xml
+xcodeproj: ./Checkers.xcodeproj
+scheme: Checkers
+output_directory: ./

@@ -1,0 +1,7 @@
+install:
+  - gem install slather
+script:
+  - xcodebuild -scheme Checkers -sdk macosx build test
+  - slather 
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
