@@ -1,0 +1,6 @@
+[submodule "CheckersLibrary"]
+	path = CheckersLibrary
+	url = /Users/tuure/Xcode/CheckersLibrary
+[submodule "CheckersAppCLI"]
+	path = CheckersAppCLI
+	url = /Users/tuure/Xcode/CheckersAppCLI
