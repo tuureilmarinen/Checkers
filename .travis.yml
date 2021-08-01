@@ -1,7 +1,8 @@
-install:
-  - gem install slather
+language: swift
+os: osx
+osx_image: xcode12.5
+
 script:
-  - xcodebuild -scheme Checkers -sdk macosx build test
-  - slather 
+  - xcodebuild -scheme CheckersLibrary -sdk macosx build test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
