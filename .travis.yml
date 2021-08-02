@@ -3,6 +3,6 @@ os: osx
 osx_image: xcode12.5
 
 script:
-  - xcodebuild -scheme CheckersLibrary -sdk macosx build test
+  - xcodebuild -scheme CheckersLibrary -sdk macosx -enableCodeCoverage YES build-for-testing
 after_success:
   - bash <(curl -s https://codecov.io/bash)
