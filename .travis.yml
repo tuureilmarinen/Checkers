@@ -7,7 +7,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - xcodebuild -scheme CheckersLibrary -sdk macosx -enableCodeCoverage YES build-for-testing
+  - xcodebuild test -project Checkers.xcodeproj -scheme CheckersLibrary -sdk macosx -enableCodeCoverage YES build test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 after_script:
