@@ -2,7 +2,13 @@ language: swift
 os: osx
 osx_image: xcode12.5
 
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script:
   - xcodebuild -scheme CheckersLibrary -sdk macosx -enableCodeCoverage YES build-for-testing
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
