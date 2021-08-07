@@ -3,12 +3,12 @@ os: osx
 osx_image: xcode12.5
 
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+  - brew install swiftlint 
 script:
-  - xcodebuild test -project Checkers.xcodeproj -scheme CheckersLibrary -sdk macosx -enableCodeCoverage YES build test
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
-after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - cd CheckersLibrary
+  - swift build
+  - swift test --enable-code-coverage
+  - xcrun llvm-cov export -format="lcov" .build/debug/CheckersLibraryPackageTests.xctest/Contents/MacOS/CheckersLibraryPackageTests -instr-profile .build/debug/codecov/default.profdata > ./../info.lcov
+  - swiftlint
+  - cd ..
+  - bash <(curl https://codecov.io/bash)
