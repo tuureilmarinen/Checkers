@@ -19,3 +19,9 @@ Mielekkäiden testien kirjoittaminen algoritmille on mietityttänyt. Helppoahan 
 Testikattavuuden seuranta on toteutettu jo, mutta seuraava vaihe on saada ne codecovin kautta myös Githubiin esille.
 
 Käytetty tuntimäärä: paljon.
+
+# Viikkoraportti 3
+
+Refaktoroitu koodia paljon.
+Lisätty swiftlint.
+Slather tuottaa ongelmia, vaikka xcode tuottaa testikattavuuden raportoinnin.
