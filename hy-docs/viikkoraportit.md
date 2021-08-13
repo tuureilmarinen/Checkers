@@ -25,3 +25,9 @@ Käytetty tuntimäärä: paljon.
 Refaktoroitu koodia paljon.
 Lisätty swiftlint.
 Slather tuottaa ongelmia, vaikka xcode tuottaa testikattavuuden raportoinnin.
+
+# Viikkoraportti 4
+
+Refaktorointia.
+Travis toimii. Codecov ym. toimii nyt.
+
