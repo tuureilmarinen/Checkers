@@ -31,3 +31,8 @@ Slather tuottaa ongelmia, vaikka xcode tuottaa testikattavuuden raportoinnin.
 Refaktorointia.
 Travis toimii. Codecov ym. toimii nyt.
 
+# Viikkoraportti 5
+Lisätty tarvittava dokumentaatio.
+Lisätty linkkejä CodeCov:iin ja sama informaatio testikattavuudesta löytyy myös itse repositorystä.
+Yksityiskohtainen kuvaus testeistä lisätty /docs/tests/.
+Lisätty testejä.
