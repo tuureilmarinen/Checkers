@@ -167,17 +167,13 @@ Movable pieces are determined by
 
   - After that bits are shifted in same direction and by same offset as in the first step.
 
-  - Result has a mask of pieces that can capture pieces in that direction, which is then iterated in O(n) time, whre n is number of set bits.
-    Piece is then checked, if it can preform another capture in O(a^b) time, where a is average count of directions in which piece can keep jumping.
+  - Result has a mask of pieces that can capture pieces in that direction,
+    which is then iterated in O(n) time, whre n is number of set bits.
+    Piece is then checked, if it can preform another capture in O(a^b) time,
+    where a is average count of directions in which piece can keep jumping.
     For kings: 0 \<= a \<= 3. For men 0\<=a\<=2. 0\<b\<16. However a and b are usually low 0 or 1.
 
 ## Methods
-
-### `pieceAt(_:)`
-
-``` swift
-public func pieceAt(_ pos: Int) -> CheckersPiece 
-```
 
 ### `piece(at:)`
 

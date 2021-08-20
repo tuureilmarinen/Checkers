@@ -15,7 +15,9 @@ public struct PieceCountRatioEvaluator: MinMaxHeuristicEvaluator
 ### `evaluate(_:)`
 
 It compares ratio of pieces on the board.
-Number of white pieces is divided by number of black pieces, or number of black pieces divided by white pieces multiplied by -1 if number of black pieces on the board is greater.
+Number of white pieces is divided by number of black pieces,
+or number of black pieces divided by white pieces multiplied by -1
+if number of black pieces on the board is greater.
 Complexity is O(1).
 
 ``` swift

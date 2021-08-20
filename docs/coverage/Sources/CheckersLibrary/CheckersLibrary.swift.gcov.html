@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-08-20 20:30:07</td>
+            <td class="headerValue">2021-08-21 02:38:51</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -62,16 +62,16 @@
 <pre class="source">
 <a name="1"><span class="lineNum">       1 </span>            : extension UInt64 {</a>
 <a name="2"><span class="lineNum">       2 </span>            :     subscript(index: Int) -&gt; Bool {</a>
-<a name="3"><span class="lineNum">       3 </span><span class="lineCov">   27707683 :         get {</span></a>
-<a name="4"><span class="lineNum">       4 </span><span class="lineCov">   27707683 :             return self&amp;(1&lt;&lt;index) &gt; 0</span></a>
-<a name="5"><span class="lineNum">       5 </span><span class="lineCov">   27707683 :         }</span></a>
-<a name="6"><span class="lineNum">       6 </span><span class="lineCov">    2835445 :         set(newValue) {</span></a>
-<a name="7"><span class="lineNum">       7 </span><span class="lineCov">    2835445 :             if newValue {</span></a>
-<a name="8"><span class="lineNum">       8 </span><span class="lineCov">     945163 :                 self = self | (1&lt;&lt;index)</span></a>
-<a name="9"><span class="lineNum">       9 </span><span class="lineCov">    2835445 :             } else {</span></a>
-<a name="10"><span class="lineNum">      10 </span><span class="lineCov">    1890282 :                 self = self &amp; (~(1&lt;&lt;index))</span></a>
-<a name="11"><span class="lineNum">      11 </span><span class="lineCov">    2835445 :             }</span></a>
-<a name="12"><span class="lineNum">      12 </span><span class="lineCov">    2835445 :         }</span></a>
+<a name="3"><span class="lineNum">       3 </span><span class="lineCov">   30196098 :         get {</span></a>
+<a name="4"><span class="lineNum">       4 </span><span class="lineCov">   30196098 :             return self&amp;(1&lt;&lt;index) &gt; 0</span></a>
+<a name="5"><span class="lineNum">       5 </span><span class="lineCov">   30196098 :         }</span></a>
+<a name="6"><span class="lineNum">       6 </span><span class="lineCov">    2760794 :         set(newValue) {</span></a>
+<a name="7"><span class="lineNum">       7 </span><span class="lineCov">    2760794 :             if newValue {</span></a>
+<a name="8"><span class="lineNum">       8 </span><span class="lineCov">     920282 :                 self = self | (1&lt;&lt;index)</span></a>
+<a name="9"><span class="lineNum">       9 </span><span class="lineCov">    2760794 :             } else {</span></a>
+<a name="10"><span class="lineNum">      10 </span><span class="lineCov">    1840512 :                 self = self &amp; (~(1&lt;&lt;index))</span></a>
+<a name="11"><span class="lineNum">      11 </span><span class="lineCov">    2760794 :             }</span></a>
+<a name="12"><span class="lineNum">      12 </span><span class="lineCov">    2760794 :         }</span></a>
 <a name="13"><span class="lineNum">      13 </span>            :     }</a>
 <a name="14"><span class="lineNum">      14 </span>            : }</a>
 </pre>

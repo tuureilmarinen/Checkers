@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-08-20 20:30:07</td>
+            <td class="headerValue">2021-08-21 02:38:51</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">9</td>
@@ -76,9 +76,9 @@
 <a name="14"><span class="lineNum">      14 </span><span class="lineCov">          3 :         return (index/2)+1</span></a>
 <a name="15"><span class="lineNum">      15 </span><span class="lineCov">          3 :     }</span></a>
 <a name="16"><span class="lineNum">      16 </span>            : </a>
-<a name="17"><span class="lineNum">      17 </span><span class="lineCov">         22 :     public static func PDNToInt(_ pdnSquareNumber: Int) -&gt; Int {</span></a>
-<a name="18"><span class="lineNum">      18 </span><span class="lineCov">         22 :         return 2*pdnSquareNumber-(1+(pdnSquareNumber/4)%2)</span></a>
-<a name="19"><span class="lineNum">      19 </span><span class="lineCov">         22 :     }</span></a>
+<a name="17"><span class="lineNum">      17 </span><span class="lineCov">         26 :     public static func PDNToInt(_ pdnSquareNumber: Int) -&gt; Int {</span></a>
+<a name="18"><span class="lineNum">      18 </span><span class="lineCov">         26 :         return 2*pdnSquareNumber-(1+(pdnSquareNumber/4)%2)</span></a>
+<a name="19"><span class="lineNum">      19 </span><span class="lineCov">         26 :     }</span></a>
 <a name="20"><span class="lineNum">      20 </span>            : </a>
 <a name="21"><span class="lineNum">      21 </span><span class="lineCov">          1 :     public static func stateToFen(_ state: GameState) -&gt; String {</span></a>
 <a name="22"><span class="lineNum">      22 </span><span class="lineCov">          1 :         var whites: [String]=[]</span></a>
@@ -100,57 +100,57 @@
 <a name="38"><span class="lineNum">      38 </span><span class="lineCov">          1 :         return (state.blackTurn ? &quot;B&quot; : &quot;W&quot;)+&quot;:W&quot;+(whites.joined(separator: &quot;,&quot;))+&quot;:B&quot;+(blacks.joined(separator: &quot;,&quot;))</span></a>
 <a name="39"><span class="lineNum">      39 </span><span class="lineCov">          1 : </span></a>
 <a name="40"><span class="lineNum">      40 </span><span class="lineCov">          1 :     }</span></a>
-<a name="41"><span class="lineNum">      41 </span><span class="lineCov">          6 :     public static func PDNfenToGameState(_ fen: String?) -&gt; GameState? {</span></a>
-<a name="42"><span class="lineNum">      42 </span><span class="lineCov">          6 :         guard fen != nil else { return nil }</span></a>
-<a name="43"><span class="lineNum">      43 </span><span class="lineCov">          6 :         let fen = fen!</span></a>
-<a name="44"><span class="lineNum">      44 </span><span class="lineCov">         12 :         func bitboards(_ pdnString: String) -&gt; (UInt64, UInt64) {</span></a>
-<a name="45"><span class="lineNum">      45 </span><span class="lineCov">         12 :             var men: UInt64 = 0</span></a>
-<a name="46"><span class="lineNum">      46 </span><span class="lineCov">         12 :             var kings: UInt64 = 0</span></a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineCov">         12 :             let pieces = pdnString.split(separator: &quot;,&quot;, omittingEmptySubsequences: true)</span></a>
-<a name="48"><span class="lineNum">      48 </span><span class="lineCov">         22 :             for piece in pieces {</span></a>
-<a name="49"><span class="lineNum">      49 </span><span class="lineCov">         22 :                 let (isKing, pdnSquareNumber) = parseNumberKing(String(piece))</span></a>
-<a name="50"><span class="lineNum">      50 </span><span class="lineCov">         22 :                 if isKing {</span></a>
-<a name="51"><span class="lineNum">      51 </span><span class="lineCov">         10 :                     kings[PDNToInt(pdnSquareNumber)]=true</span></a>
-<a name="52"><span class="lineNum">      52 </span><span class="lineCov">         22 :                 } else {</span></a>
+<a name="41"><span class="lineNum">      41 </span><span class="lineCov">          7 :     public static func PDNfenToGameState(_ fen: String?) -&gt; GameState? {</span></a>
+<a name="42"><span class="lineNum">      42 </span><span class="lineCov">          7 :         guard fen != nil else { return nil }</span></a>
+<a name="43"><span class="lineNum">      43 </span><span class="lineCov">          7 :         let fen = fen!</span></a>
+<a name="44"><span class="lineNum">      44 </span><span class="lineCov">         14 :         func bitboards(_ pdnString: String) -&gt; (UInt64, UInt64) {</span></a>
+<a name="45"><span class="lineNum">      45 </span><span class="lineCov">         14 :             var men: UInt64 = 0</span></a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">         14 :             var kings: UInt64 = 0</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">         14 :             let pieces = pdnString.split(separator: &quot;,&quot;, omittingEmptySubsequences: true)</span></a>
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov">         26 :             for piece in pieces {</span></a>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">         26 :                 let (isKing, pdnSquareNumber) = parseNumberKing(String(piece))</span></a>
+<a name="50"><span class="lineNum">      50 </span><span class="lineCov">         26 :                 if isKing {</span></a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">         14 :                     kings[PDNToInt(pdnSquareNumber)]=true</span></a>
+<a name="52"><span class="lineNum">      52 </span><span class="lineCov">         26 :                 } else {</span></a>
 <a name="53"><span class="lineNum">      53 </span><span class="lineCov">         12 :                     men[PDNToInt(pdnSquareNumber)]=true</span></a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov">         22 :                 }</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         22 :             }</span></a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         12 :             return (men, kings)</span></a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">         12 : </span></a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">         12 :         }</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">          6 :         // wheter piece is king pdn number</span></a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">         22 :         func parseNumberKing(_ pieceString: String) -&gt; (Bool, Int) {</span></a>
-<a name="61"><span class="lineNum">      61 </span><span class="lineCov">         22 :             if pieceString.prefix(1)==&quot;K&quot; || pieceString.prefix(1)==&quot;k&quot; {</span></a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">         10 :                 return (Bool(true),</span></a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">         10 :                         Int(String(</span></a>
-<a name="64"><span class="lineNum">      64 </span><span class="lineCov">         10 :                                 pieceString[pieceString.index(pieceString.startIndex,</span></a>
-<a name="65"><span class="lineNum">      65 </span><span class="lineCov">         10 :                                                               offsetBy: 1)..&lt;pieceString.endIndex])</span></a>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         10 :                         )!)</span></a>
-<a name="67"><span class="lineNum">      67 </span><span class="lineCov">         12 :             }</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">         26 :                 }</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         26 :             }</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         14 :             return (men, kings)</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">         14 : </span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">         14 :         }</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">          7 :         // wheter piece is king pdn number</span></a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">         26 :         func parseNumberKing(_ pieceString: String) -&gt; (Bool, Int) {</span></a>
+<a name="61"><span class="lineNum">      61 </span><span class="lineCov">         26 :             if pieceString.prefix(1)==&quot;K&quot; || pieceString.prefix(1)==&quot;k&quot; {</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">         14 :                 return (Bool(true),</span></a>
+<a name="63"><span class="lineNum">      63 </span><span class="lineCov">         14 :                         Int(String(</span></a>
+<a name="64"><span class="lineNum">      64 </span><span class="lineCov">         14 :                                 pieceString[pieceString.index(pieceString.startIndex,</span></a>
+<a name="65"><span class="lineNum">      65 </span><span class="lineCov">         14 :                                                               offsetBy: 1)..&lt;pieceString.endIndex])</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         14 :                         )!)</span></a>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">         14 :             }</span></a>
 <a name="68"><span class="lineNum">      68 </span><span class="lineCov">         12 :             return (Bool(false), Int(pieceString)!)</span></a>
-<a name="69"><span class="lineNum">      69 </span><span class="lineCov">         22 : </span></a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         22 :         }</span></a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">          6 : </span></a>
-<a name="72"><span class="lineNum">      72 </span><span class="lineCov">          6 :         let fenArray = fen.split(separator: &quot;:&quot;, maxSplits: 3, omittingEmptySubsequences: true)</span></a>
-<a name="73"><span class="lineNum">      73 </span><span class="lineCov">          6 :         let turn = fenArray[0]</span></a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineCov">          6 :         let piecesA=fenArray[1]</span></a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineCov">          6 :         let piecesB=fenArray[2]</span></a>
-<a name="76"><span class="lineNum">      76 </span><span class="lineCov">          6 :         let blackTurn = turn==&quot;b&quot;||turn==&quot;B&quot; ? true : false</span></a>
-<a name="77"><span class="lineNum">      77 </span><span class="lineCov">          6 : </span></a>
-<a name="78"><span class="lineNum">      78 </span><span class="lineCov">          6 :         let bitboardsA = bitboards(String(piecesA[piecesA.index(piecesA.startIndex, offsetBy: 1)..&lt;piecesA.endIndex]))</span></a>
-<a name="79"><span class="lineNum">      79 </span><span class="lineCov">          6 :         let bitboardsB = bitboards(String(piecesB[piecesB.index(piecesB.startIndex, offsetBy: 1)..&lt;piecesB.endIndex]))</span></a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">          6 : </span></a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">          6 :         let ((blackMen, blackKings), (whiteMen, whiteKings)) = piecesA.prefix(1)==&quot;B&quot; || piecesA.prefix(1)==&quot;b&quot; ?</span></a>
-<a name="82"><span class="lineNum">      82 </span><span class="lineCov">          6 :             (bitboardsA, bitboardsB) :</span></a>
-<a name="83"><span class="lineNum">      83 </span><span class="lineCov">          6 :             (bitboardsB, bitboardsA)</span></a>
-<a name="84"><span class="lineNum">      84 </span><span class="lineCov">          6 : </span></a>
-<a name="85"><span class="lineNum">      85 </span><span class="lineCov">          6 :         return GameState(</span></a>
-<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          6 :             blackMen: blackMen,</span></a>
-<a name="87"><span class="lineNum">      87 </span><span class="lineCov">          6 :             blackKings: blackKings,</span></a>
-<a name="88"><span class="lineNum">      88 </span><span class="lineCov">          6 :             whiteMen: whiteMen,</span></a>
-<a name="89"><span class="lineNum">      89 </span><span class="lineCov">          6 :             whiteKings: whiteKings,</span></a>
-<a name="90"><span class="lineNum">      90 </span><span class="lineCov">          6 :             blackTurn: blackTurn)</span></a>
-<a name="91"><span class="lineNum">      91 </span><span class="lineCov">          6 :     }</span></a>
+<a name="69"><span class="lineNum">      69 </span><span class="lineCov">         26 : </span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         26 :         }</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">          7 : </span></a>
+<a name="72"><span class="lineNum">      72 </span><span class="lineCov">          7 :         let fenArray = fen.split(separator: &quot;:&quot;, maxSplits: 3, omittingEmptySubsequences: true)</span></a>
+<a name="73"><span class="lineNum">      73 </span><span class="lineCov">          7 :         let turn = fenArray[0]</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">          7 :         let piecesA=fenArray[1]</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">          7 :         let piecesB=fenArray[2]</span></a>
+<a name="76"><span class="lineNum">      76 </span><span class="lineCov">          7 :         let blackTurn = turn==&quot;b&quot;||turn==&quot;B&quot; ? true : false</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">          7 : </span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">          7 :         let bitboardsA = bitboards(String(piecesA[piecesA.index(piecesA.startIndex, offsetBy: 1)..&lt;piecesA.endIndex]))</span></a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">          7 :         let bitboardsB = bitboards(String(piecesB[piecesB.index(piecesB.startIndex, offsetBy: 1)..&lt;piecesB.endIndex]))</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineCov">          7 : </span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">          7 :         let ((blackMen, blackKings), (whiteMen, whiteKings)) = piecesA.prefix(1)==&quot;B&quot; || piecesA.prefix(1)==&quot;b&quot; ?</span></a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineCov">          7 :             (bitboardsA, bitboardsB) :</span></a>
+<a name="83"><span class="lineNum">      83 </span><span class="lineCov">          7 :             (bitboardsB, bitboardsA)</span></a>
+<a name="84"><span class="lineNum">      84 </span><span class="lineCov">          7 : </span></a>
+<a name="85"><span class="lineNum">      85 </span><span class="lineCov">          7 :         return GameState(</span></a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          7 :             blackMen: blackMen,</span></a>
+<a name="87"><span class="lineNum">      87 </span><span class="lineCov">          7 :             blackKings: blackKings,</span></a>
+<a name="88"><span class="lineNum">      88 </span><span class="lineCov">          7 :             whiteMen: whiteMen,</span></a>
+<a name="89"><span class="lineNum">      89 </span><span class="lineCov">          7 :             whiteKings: whiteKings,</span></a>
+<a name="90"><span class="lineNum">      90 </span><span class="lineCov">          7 :             blackTurn: blackTurn)</span></a>
+<a name="91"><span class="lineNum">      91 </span><span class="lineCov">          7 :     }</span></a>
 <a name="92"><span class="lineNum">      92 </span>            : </a>
 <a name="93"><span class="lineNum">      93 </span>            : }</a>
 </pre>

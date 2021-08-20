@@ -26,14 +26,18 @@ public var knownStateValues: [GameState: (Double, GameState?)]
 
 ### `searchDepth`
 
+initial search depth
+
 ``` swift
-public var searchDepth: Int 
+public var searchDepth = 8
 ```
 
 ### `cacheDepth`
 
+how many moves deep must evaluation have taken place, in order to accept result from cache, Int.max disables.
+
 ``` swift
-public var cacheDepth: Int 
+public var cacheDepth = 5
 ```
 
 ### `evaluator`

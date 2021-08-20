@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-08-20 20:30:07</td>
+            <td class="headerValue">2021-08-21 02:38:51</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">1</td>
@@ -76,15 +76,17 @@
 <a name="14"><span class="lineNum">      14 </span>            : /// Provides heuristic function for the CheckersMinMax by comparing ratios of pieces on the board.</a>
 <a name="15"><span class="lineNum">      15 </span>            : public struct PieceCountRatioEvaluator: MinMaxHeuristicEvaluator {</a>
 <a name="16"><span class="lineNum">      16 </span>            :     /// It compares ratio of pieces on the board.</a>
-<a name="17"><span class="lineNum">      17 </span>            :     /// Number of white pieces is divided by number of black pieces, or number of black pieces divided by white pieces multiplied by -1 if number of black pieces on the board is greater.</a>
-<a name="18"><span class="lineNum">      18 </span>            :     /// Complexity is O(1).</a>
-<a name="19"><span class="lineNum">      19 </span>            :     /// - Parameter state: GameState to be evaluated.</a>
-<a name="20"><span class="lineNum">      20 </span>            :     /// - Returns: Positive value if situation if favorable for the white player, negative if it is not.</a>
-<a name="21"><span class="lineNum">      21 </span><span class="lineCov">    9163579 :     public static func evaluate(_ state: GameState) -&gt; Double {</span></a>
-<a name="22"><span class="lineNum">      22 </span><span class="lineCov">    9163579 :         let returnValue = Double(state.whitePieces.nonzeroBitCount)/Double(state.blackPieces.nonzeroBitCount)</span></a>
-<a name="23"><span class="lineNum">      23 </span><span class="lineCov">    9163579 :         return returnValue &gt; 1 ? returnValue : (1.0/returnValue) * -1</span></a>
-<a name="24"><span class="lineNum">      24 </span><span class="lineCov">    9163579 :     }</span></a>
-<a name="25"><span class="lineNum">      25 </span>            : }</a>
+<a name="17"><span class="lineNum">      17 </span>            :     /// Number of white pieces is divided by number of black pieces,</a>
+<a name="18"><span class="lineNum">      18 </span>            :     /// or number of black pieces divided by white pieces multiplied by -1</a>
+<a name="19"><span class="lineNum">      19 </span>            :     /// if number of black pieces on the board is greater.</a>
+<a name="20"><span class="lineNum">      20 </span>            :     /// Complexity is O(1).</a>
+<a name="21"><span class="lineNum">      21 </span>            :     /// - Parameter state: GameState to be evaluated.</a>
+<a name="22"><span class="lineNum">      22 </span>            :     /// - Returns: Positive value if situation if favorable for the white player, negative if it is not.</a>
+<a name="23"><span class="lineNum">      23 </span><span class="lineCov">   10673514 :     public static func evaluate(_ state: GameState) -&gt; Double {</span></a>
+<a name="24"><span class="lineNum">      24 </span><span class="lineCov">   10673514 :         let returnValue = Double(state.whitePieces.nonzeroBitCount)/Double(state.blackPieces.nonzeroBitCount)</span></a>
+<a name="25"><span class="lineNum">      25 </span><span class="lineCov">   10673514 :         return returnValue &gt; 1 ? returnValue : (1.0/returnValue) * -1</span></a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineCov">   10673514 :     }</span></a>
+<a name="27"><span class="lineNum">      27 </span>            : }</a>
 </pre>
       </td>
     </tr>

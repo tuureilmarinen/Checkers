@@ -18,7 +18,7 @@ case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
 case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
 ```
 
-### `BlackKing`
+### `WhiteMan`
 
 ``` swift
 case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
@@ -30,7 +30,7 @@ case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
 case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
 ```
 
-### `WhiteMan`
+### `BlackKing`
 
 ``` swift
 case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
