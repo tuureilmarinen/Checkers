@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-08-20 19:18:49</td>
+            <td class="headerValue">2021-08-20 20:30:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">20</td>
@@ -134,13 +134,13 @@
 <a name="72"><span class="lineNum">      72 </span>            :     ///   - whiteMen: Bitboard of the black men on the board.</a>
 <a name="73"><span class="lineNum">      73 </span>            :     ///   - whiteKings: Bitboard of the black men on the board.</a>
 <a name="74"><span class="lineNum">      74 </span>            :     ///   - blackTurn: True, if the player with the black pieces should make the next move.</a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineCov">   92634414 :     init(blackMen: UInt64, blackKings: UInt64, whiteMen: UInt64, whiteKings: UInt64, blackTurn: Bool) {</span></a>
-<a name="76"><span class="lineNum">      76 </span><span class="lineCov">   92634414 :         self.blackMen=blackMen</span></a>
-<a name="77"><span class="lineNum">      77 </span><span class="lineCov">   92634414 :         self.blackKings=blackKings</span></a>
-<a name="78"><span class="lineNum">      78 </span><span class="lineCov">   92634414 :         self.whiteMen=whiteMen</span></a>
-<a name="79"><span class="lineNum">      79 </span><span class="lineCov">   92634414 :         self.whiteKings=whiteKings</span></a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">   92634414 :         self.blackTurn=blackTurn</span></a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">   92634414 :     }</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">   87897621 :     init(blackMen: UInt64, blackKings: UInt64, whiteMen: UInt64, whiteKings: UInt64, blackTurn: Bool) {</span></a>
+<a name="76"><span class="lineNum">      76 </span><span class="lineCov">   87897621 :         self.blackMen=blackMen</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">   87897621 :         self.blackKings=blackKings</span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">   87897621 :         self.whiteMen=whiteMen</span></a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">   87897621 :         self.whiteKings=whiteKings</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineCov">   87897621 :         self.blackTurn=blackTurn</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">   87897621 :     }</span></a>
 <a name="82"><span class="lineNum">      82 </span>            :     public var blackMen: UInt64</a>
 <a name="83"><span class="lineNum">      83 </span>            :     public var blackKings: UInt64</a>
 <a name="84"><span class="lineNum">      84 </span>            :     public var whiteMen: UInt64</a>
@@ -221,28 +221,28 @@
 <a name="159"><span class="lineNum">     159 </span>            :         blackTurn: true)</a>
 <a name="160"><span class="lineNum">     160 </span>            : </a>
 <a name="161"><span class="lineNum">     161 </span>            :     // A computed property of all black pieces on the board.</a>
-<a name="162"><span class="lineNum">     162 </span><span class="lineCov">   54260799 :     public var blackPieces: UInt64 {</span></a>
-<a name="163"><span class="lineNum">     163 </span><span class="lineCov">   54260799 :         return blackMen | blackKings</span></a>
-<a name="164"><span class="lineNum">     164 </span><span class="lineCov">   54260799 :     }</span></a>
+<a name="162"><span class="lineNum">     162 </span><span class="lineCov">   50917491 :     public var blackPieces: UInt64 {</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">   50917491 :         return blackMen | blackKings</span></a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineCov">   50917491 :     }</span></a>
 <a name="165"><span class="lineNum">     165 </span>            : </a>
 <a name="166"><span class="lineNum">     166 </span>            :     // A computed property of all black pieces on the board.</a>
-<a name="167"><span class="lineNum">     167 </span><span class="lineCov">   70539449 :     public var whitePieces: UInt64 {</span></a>
-<a name="168"><span class="lineNum">     168 </span><span class="lineCov">   70539449 :         return whiteMen | whiteKings</span></a>
-<a name="169"><span class="lineNum">     169 </span><span class="lineCov">   70539449 :     }</span></a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">   69216789 :     public var whitePieces: UInt64 {</span></a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">   69216789 :         return whiteMen | whiteKings</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineCov">   69216789 :     }</span></a>
 <a name="170"><span class="lineNum">     170 </span>            : </a>
 <a name="171"><span class="lineNum">     171 </span>            :     // A computed property of all pieces on the board.</a>
-<a name="172"><span class="lineNum">     172 </span><span class="lineCov">   88711582 :     public var allPieces: UInt64 {</span></a>
-<a name="173"><span class="lineNum">     173 </span><span class="lineCov">   88711582 :         return whiteMen | whiteKings | blackMen | blackKings</span></a>
-<a name="174"><span class="lineNum">     174 </span><span class="lineCov">   88711582 :     }</span></a>
+<a name="172"><span class="lineNum">     172 </span><span class="lineCov">   86959304 :     public var allPieces: UInt64 {</span></a>
+<a name="173"><span class="lineNum">     173 </span><span class="lineCov">   86959304 :         return whiteMen | whiteKings | blackMen | blackKings</span></a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">   86959304 :     }</span></a>
 <a name="175"><span class="lineNum">     175 </span>            : </a>
 <a name="176"><span class="lineNum">     176 </span>            :     // Wheter the black should make the next turn.</a>
 <a name="177"><span class="lineNum">     177 </span>            :     public var blackTurn: Bool</a>
 <a name="178"><span class="lineNum">     178 </span>            : </a>
 <a name="179"><span class="lineNum">     179 </span>            :     // Wheter the white should make the next turn.</a>
 <a name="180"><span class="lineNum">     180 </span>            :     public var whiteTurn: Bool {</a>
-<a name="181"><span class="lineNum">     181 </span><span class="lineCov">   99636145 :         get {</span></a>
-<a name="182"><span class="lineNum">     182 </span><span class="lineCov">   99636145 :             return !blackTurn</span></a>
-<a name="183"><span class="lineNum">     183 </span><span class="lineCov">   99636145 :         }</span></a>
+<a name="181"><span class="lineNum">     181 </span><span class="lineCov">   94630132 :         get {</span></a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineCov">   94630132 :             return !blackTurn</span></a>
+<a name="183"><span class="lineNum">     183 </span><span class="lineCov">   94630132 :         }</span></a>
 <a name="184"><span class="lineNum">     184 </span><span class="lineNoCov">          0 :         set(newWhiteTurnValue) {</span></a>
 <a name="185"><span class="lineNum">     185 </span><span class="lineNoCov">          0 :             blackTurn = !newWhiteTurnValue</span></a>
 <a name="186"><span class="lineNum">     186 </span><span class="lineNoCov">          0 :         }</span></a>
@@ -273,103 +273,103 @@
 <a name="211"><span class="lineNum">     211 </span>            :     ///  - Result has a mask of pieces that can capture pieces in that direction, which is then iterated in O(n) time, whre n is number of set bits.</a>
 <a name="212"><span class="lineNum">     212 </span>            :     /// Piece is then checked, if it can preform another capture in O(a^b) time, where a is average count of directions in which piece can keep jumping.</a>
 <a name="213"><span class="lineNum">     213 </span>            :     /// For kings: 0 &lt;= a &lt;= 3. For men 0&lt;=a&lt;=2. 0&lt;b&lt;16. However a and b are usually low 0 or 1.</a>
-<a name="214"><span class="lineNum">     214 </span><span class="lineCov">   17016057 :     public var children: Set&lt;GameState&gt; {</span></a>
-<a name="215"><span class="lineNum">     215 </span><span class="lineCov">   17016057 :         var children: Set&lt;GameState&gt; = []</span></a>
-<a name="216"><span class="lineNum">     216 </span><span class="lineCov">   17016057 :         var mask: UInt64</span></a>
-<a name="217"><span class="lineNum">     217 </span><span class="lineCov">   17016057 :         if blackTurn {</span></a>
-<a name="218"><span class="lineNum">     218 </span><span class="lineCov">    9511464 :             // BlackMen Capture</span></a>
-<a name="219"><span class="lineNum">     219 </span><span class="lineCov">    9511464 :             mask = getCaptureMask(blackMen, blackKings|whitePieces, whitePieces, CheckersDiff.capture.down.left)</span></a>
-<a name="220"><span class="lineNum">     220 </span><span class="lineCov">    9511464 :             capturePieces(.BlackMan, mask, CheckersDiff.capture.down.left, &amp;children)</span></a>
-<a name="221"><span class="lineNum">     221 </span><span class="lineCov">    9511464 : </span></a>
-<a name="222"><span class="lineNum">     222 </span><span class="lineCov">    9511464 :             mask = getCaptureMask(blackMen, blackKings|whitePieces, whitePieces, CheckersDiff.capture.down.right)</span></a>
-<a name="223"><span class="lineNum">     223 </span><span class="lineCov">    9511464 :             capturePieces(.BlackMan, mask, CheckersDiff.capture.down.right, &amp;children)</span></a>
-<a name="224"><span class="lineNum">     224 </span><span class="lineCov">    9511464 : </span></a>
-<a name="225"><span class="lineNum">     225 </span><span class="lineCov">    9511464 :             if blackKings&gt;0 {</span></a>
-<a name="226"><span class="lineNum">     226 </span><span class="lineCov">    2811449 :                 // Black Kings Capture</span></a>
-<a name="227"><span class="lineNum">     227 </span><span class="lineCov">    2811449 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.down.left)</span></a>
-<a name="228"><span class="lineNum">     228 </span><span class="lineCov">    2811449 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.down.left, &amp;children)</span></a>
-<a name="229"><span class="lineNum">     229 </span><span class="lineCov">    2811449 : </span></a>
-<a name="230"><span class="lineNum">     230 </span><span class="lineCov">    2811449 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.down.right)</span></a>
-<a name="231"><span class="lineNum">     231 </span><span class="lineCov">    2811449 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.down.right, &amp;children)</span></a>
-<a name="232"><span class="lineNum">     232 </span><span class="lineCov">    2811449 : </span></a>
-<a name="233"><span class="lineNum">     233 </span><span class="lineCov">    2811449 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.up.left)</span></a>
-<a name="234"><span class="lineNum">     234 </span><span class="lineCov">    2811449 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.up.left, &amp;children)</span></a>
-<a name="235"><span class="lineNum">     235 </span><span class="lineCov">    2811449 : </span></a>
-<a name="236"><span class="lineNum">     236 </span><span class="lineCov">    2811449 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.up.right)</span></a>
-<a name="237"><span class="lineNum">     237 </span><span class="lineCov">    2811449 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.up.right, &amp;children)</span></a>
-<a name="238"><span class="lineNum">     238 </span><span class="lineCov">    9511464 :             }</span></a>
-<a name="239"><span class="lineNum">     239 </span><span class="lineCov">    9511464 : </span></a>
-<a name="240"><span class="lineNum">     240 </span><span class="lineCov">    9511464 :             guard children.isEmpty else { return children }</span></a>
-<a name="241"><span class="lineNum">     241 </span><span class="lineCov">    6553320 : </span></a>
-<a name="242"><span class="lineNum">     242 </span><span class="lineCov">    6553320 :             // Black Men Move</span></a>
-<a name="243"><span class="lineNum">     243 </span><span class="lineCov">    6553320 :             mask = getMoveMask(blackMen &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.down.left)</span></a>
-<a name="244"><span class="lineNum">     244 </span><span class="lineCov">    6553320 :             movePieces(.BlackMan, mask, CheckersDiff.move.down.left, &amp;children)</span></a>
-<a name="245"><span class="lineNum">     245 </span><span class="lineCov">    6553320 : </span></a>
-<a name="246"><span class="lineNum">     246 </span><span class="lineCov">    6553320 :             mask = getMoveMask(blackMen &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.down.right)</span></a>
-<a name="247"><span class="lineNum">     247 </span><span class="lineCov">    6553320 :             movePieces(.BlackMan, mask, CheckersDiff.move.down.right, &amp;children)</span></a>
-<a name="248"><span class="lineNum">     248 </span><span class="lineCov">    6553320 : </span></a>
-<a name="249"><span class="lineNum">     249 </span><span class="lineCov">    6553320 :             if blackKings&gt;0 {</span></a>
-<a name="250"><span class="lineNum">     250 </span><span class="lineCov">    1984426 :                 // Black Kings Move</span></a>
-<a name="251"><span class="lineNum">     251 </span><span class="lineCov">    1984426 :                 mask=getMoveMask(blackKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.down.left)</span></a>
-<a name="252"><span class="lineNum">     252 </span><span class="lineCov">    1984426 :                 movePieces(.BlackKing, mask, CheckersDiff.move.down.left, &amp;children)</span></a>
-<a name="253"><span class="lineNum">     253 </span><span class="lineCov">    1984426 : </span></a>
-<a name="254"><span class="lineNum">     254 </span><span class="lineCov">    1984426 :                 mask=getMoveMask(blackKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.down.right)</span></a>
-<a name="255"><span class="lineNum">     255 </span><span class="lineCov">    1984426 :                 movePieces(.BlackKing, mask, CheckersDiff.move.down.right, &amp;children)</span></a>
-<a name="256"><span class="lineNum">     256 </span><span class="lineCov">    1984426 : </span></a>
-<a name="257"><span class="lineNum">     257 </span><span class="lineCov">    1984426 :                 mask=getMoveMask(blackKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.up.left)</span></a>
-<a name="258"><span class="lineNum">     258 </span><span class="lineCov">    1984426 :                 movePieces(.BlackKing, mask, CheckersDiff.move.up.left, &amp;children)</span></a>
-<a name="259"><span class="lineNum">     259 </span><span class="lineCov">    1984426 : </span></a>
-<a name="260"><span class="lineNum">     260 </span><span class="lineCov">    1984426 :                 mask=getMoveMask(blackKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.up.right)</span></a>
-<a name="261"><span class="lineNum">     261 </span><span class="lineCov">    1984426 :                 movePieces(.BlackKing, mask, CheckersDiff.move.up.right, &amp;children)</span></a>
-<a name="262"><span class="lineNum">     262 </span><span class="lineCov">    6553320 :             }</span></a>
-<a name="263"><span class="lineNum">     263 </span><span class="lineCov">   14057913 :         } else { // white Turn</span></a>
-<a name="264"><span class="lineNum">     264 </span><span class="lineCov">    7504593 :             // White Men Capture</span></a>
-<a name="265"><span class="lineNum">     265 </span><span class="lineCov">    7504593 :             mask = getCaptureMask(whiteMen, whiteKings|blackPieces, blackPieces, CheckersDiff.capture.up.left)</span></a>
-<a name="266"><span class="lineNum">     266 </span><span class="lineCov">    7504593 :             capturePieces(.WhiteMan, mask, CheckersDiff.capture.up.left, &amp;children)</span></a>
-<a name="267"><span class="lineNum">     267 </span><span class="lineCov">    7504593 : </span></a>
-<a name="268"><span class="lineNum">     268 </span><span class="lineCov">    7504593 :             mask = getCaptureMask(whiteMen, whiteKings|blackPieces, blackPieces, CheckersDiff.capture.up.right)</span></a>
-<a name="269"><span class="lineNum">     269 </span><span class="lineCov">    7504593 :             capturePieces(.WhiteMan, mask, CheckersDiff.capture.up.right, &amp;children)</span></a>
-<a name="270"><span class="lineNum">     270 </span><span class="lineCov">    7504593 : </span></a>
-<a name="271"><span class="lineNum">     271 </span><span class="lineCov">    7504593 :             if whiteKings&gt;0 {</span></a>
-<a name="272"><span class="lineNum">     272 </span><span class="lineCov">    1780053 :                 // White Kings Capture</span></a>
-<a name="273"><span class="lineNum">     273 </span><span class="lineCov">    1780053 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.down.left)</span></a>
-<a name="274"><span class="lineNum">     274 </span><span class="lineCov">    1780053 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.down.left, &amp;children)</span></a>
-<a name="275"><span class="lineNum">     275 </span><span class="lineCov">    1780053 : </span></a>
-<a name="276"><span class="lineNum">     276 </span><span class="lineCov">    1780053 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.down.right)</span></a>
-<a name="277"><span class="lineNum">     277 </span><span class="lineCov">    1780053 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.down.right, &amp;children)</span></a>
-<a name="278"><span class="lineNum">     278 </span><span class="lineCov">    1780053 : </span></a>
-<a name="279"><span class="lineNum">     279 </span><span class="lineCov">    1780053 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.up.left)</span></a>
-<a name="280"><span class="lineNum">     280 </span><span class="lineCov">    1780053 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.up.left, &amp;children)</span></a>
-<a name="281"><span class="lineNum">     281 </span><span class="lineCov">    1780053 : </span></a>
-<a name="282"><span class="lineNum">     282 </span><span class="lineCov">    1780053 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.up.right)</span></a>
-<a name="283"><span class="lineNum">     283 </span><span class="lineCov">    1780053 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.up.right, &amp;children)</span></a>
-<a name="284"><span class="lineNum">     284 </span><span class="lineCov">    7504593 :             }</span></a>
-<a name="285"><span class="lineNum">     285 </span><span class="lineCov">    7504593 : </span></a>
-<a name="286"><span class="lineNum">     286 </span><span class="lineCov">    7504593 :             guard children.isEmpty else { return children }</span></a>
-<a name="287"><span class="lineNum">     287 </span><span class="lineCov">    5197400 : </span></a>
-<a name="288"><span class="lineNum">     288 </span><span class="lineCov">    5197400 :             // White Men Move</span></a>
-<a name="289"><span class="lineNum">     289 </span><span class="lineCov">    5197400 :             mask = getMoveMask(whiteMen &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.up.left)</span></a>
-<a name="290"><span class="lineNum">     290 </span><span class="lineCov">    5197400 :             movePieces(.WhiteMan, mask, CheckersDiff.move.up.left, &amp;children)</span></a>
-<a name="291"><span class="lineNum">     291 </span><span class="lineCov">    5197400 :             mask = getMoveMask(whiteMen &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.up.right)</span></a>
-<a name="292"><span class="lineNum">     292 </span><span class="lineCov">    5197400 :             movePieces(.WhiteMan, mask, CheckersDiff.move.up.right, &amp;children)</span></a>
-<a name="293"><span class="lineNum">     293 </span><span class="lineCov">    5197400 : </span></a>
-<a name="294"><span class="lineNum">     294 </span><span class="lineCov">    5197400 :             if whiteKings&gt;0 {</span></a>
-<a name="295"><span class="lineNum">     295 </span><span class="lineCov">    1218554 :                 // White Kings Move</span></a>
-<a name="296"><span class="lineNum">     296 </span><span class="lineCov">    1218554 :                 mask = getMoveMask(whiteKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.down.left)</span></a>
-<a name="297"><span class="lineNum">     297 </span><span class="lineCov">    1218554 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.down.left, &amp;children)</span></a>
-<a name="298"><span class="lineNum">     298 </span><span class="lineCov">    1218554 : </span></a>
-<a name="299"><span class="lineNum">     299 </span><span class="lineCov">    1218554 :                 mask = getMoveMask(whiteKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.down.right)</span></a>
-<a name="300"><span class="lineNum">     300 </span><span class="lineCov">    1218554 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.down.right, &amp;children)</span></a>
-<a name="301"><span class="lineNum">     301 </span><span class="lineCov">    1218554 : </span></a>
-<a name="302"><span class="lineNum">     302 </span><span class="lineCov">    1218554 :                 mask = getMoveMask(whiteKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.up.left)</span></a>
-<a name="303"><span class="lineNum">     303 </span><span class="lineCov">    1218554 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.up.left, &amp;children)</span></a>
-<a name="304"><span class="lineNum">     304 </span><span class="lineCov">    1218554 : </span></a>
-<a name="305"><span class="lineNum">     305 </span><span class="lineCov">    1218554 :                 mask = getMoveMask(whiteKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.up.right)</span></a>
-<a name="306"><span class="lineNum">     306 </span><span class="lineCov">    1218554 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.up.right, &amp;children)</span></a>
-<a name="307"><span class="lineNum">     307 </span><span class="lineCov">    5197400 :             }</span></a>
-<a name="308"><span class="lineNum">     308 </span><span class="lineCov">   11750720 :         }</span></a>
-<a name="309"><span class="lineNum">     309 </span><span class="lineCov">   11750720 :         return children</span></a>
-<a name="310"><span class="lineNum">     310 </span><span class="lineCov">   14057913 :     }</span></a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineCov">   15905783 :     public var children: Set&lt;GameState&gt; {</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">   15905783 :         var children: Set&lt;GameState&gt; = []</span></a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">   15905783 :         var mask: UInt64</span></a>
+<a name="217"><span class="lineNum">     217 </span><span class="lineCov">   15905783 :         if blackTurn {</span></a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">    9137991 :             // BlackMen Capture</span></a>
+<a name="219"><span class="lineNum">     219 </span><span class="lineCov">    9137991 :             mask = getCaptureMask(blackMen, blackKings|whitePieces, whitePieces, CheckersDiff.capture.down.left)</span></a>
+<a name="220"><span class="lineNum">     220 </span><span class="lineCov">    9137991 :             capturePieces(.BlackMan, mask, CheckersDiff.capture.down.left, &amp;children)</span></a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">    9137991 : </span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">    9137991 :             mask = getCaptureMask(blackMen, blackKings|whitePieces, whitePieces, CheckersDiff.capture.down.right)</span></a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">    9137991 :             capturePieces(.BlackMan, mask, CheckersDiff.capture.down.right, &amp;children)</span></a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineCov">    9137991 : </span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineCov">    9137991 :             if blackKings&gt;0 {</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">    2937650 :                 // Black Kings Capture</span></a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineCov">    2937650 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.down.left)</span></a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">    2937650 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.down.left, &amp;children)</span></a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineCov">    2937650 : </span></a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">    2937650 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.down.right)</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">    2937650 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.down.right, &amp;children)</span></a>
+<a name="232"><span class="lineNum">     232 </span><span class="lineCov">    2937650 : </span></a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineCov">    2937650 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.up.left)</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">    2937650 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.up.left, &amp;children)</span></a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineCov">    2937650 : </span></a>
+<a name="236"><span class="lineNum">     236 </span><span class="lineCov">    2937650 :                 mask = getCaptureMask(blackKings, blackMen|whitePieces, whitePieces, CheckersDiff.capture.up.right)</span></a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">    2937650 :                 capturePieces(.BlackKing, mask, CheckersDiff.capture.up.right, &amp;children)</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">    9137991 :             }</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">    9137991 : </span></a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineCov">    9137991 :             guard children.isEmpty else { return children }</span></a>
+<a name="241"><span class="lineNum">     241 </span><span class="lineCov">    6319321 : </span></a>
+<a name="242"><span class="lineNum">     242 </span><span class="lineCov">    6319321 :             // Black Men Move</span></a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineCov">    6319321 :             mask = getMoveMask(blackMen &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.down.left)</span></a>
+<a name="244"><span class="lineNum">     244 </span><span class="lineCov">    6319321 :             movePieces(.BlackMan, mask, CheckersDiff.move.down.left, &amp;children)</span></a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineCov">    6319321 : </span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineCov">    6319321 :             mask = getMoveMask(blackMen &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.down.right)</span></a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">    6319321 :             movePieces(.BlackMan, mask, CheckersDiff.move.down.right, &amp;children)</span></a>
+<a name="248"><span class="lineNum">     248 </span><span class="lineCov">    6319321 : </span></a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">    6319321 :             if blackKings&gt;0 {</span></a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineCov">    2139210 :                 // Black Kings Move</span></a>
+<a name="251"><span class="lineNum">     251 </span><span class="lineCov">    2139210 :                 mask=getMoveMask(blackKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.down.left)</span></a>
+<a name="252"><span class="lineNum">     252 </span><span class="lineCov">    2139210 :                 movePieces(.BlackKing, mask, CheckersDiff.move.down.left, &amp;children)</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">    2139210 : </span></a>
+<a name="254"><span class="lineNum">     254 </span><span class="lineCov">    2139210 :                 mask=getMoveMask(blackKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.down.right)</span></a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">    2139210 :                 movePieces(.BlackKing, mask, CheckersDiff.move.down.right, &amp;children)</span></a>
+<a name="256"><span class="lineNum">     256 </span><span class="lineCov">    2139210 : </span></a>
+<a name="257"><span class="lineNum">     257 </span><span class="lineCov">    2139210 :                 mask=getMoveMask(blackKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.up.left)</span></a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">    2139210 :                 movePieces(.BlackKing, mask, CheckersDiff.move.up.left, &amp;children)</span></a>
+<a name="259"><span class="lineNum">     259 </span><span class="lineCov">    2139210 : </span></a>
+<a name="260"><span class="lineNum">     260 </span><span class="lineCov">    2139210 :                 mask=getMoveMask(blackKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.up.right)</span></a>
+<a name="261"><span class="lineNum">     261 </span><span class="lineCov">    2139210 :                 movePieces(.BlackKing, mask, CheckersDiff.move.up.right, &amp;children)</span></a>
+<a name="262"><span class="lineNum">     262 </span><span class="lineCov">    6319321 :             }</span></a>
+<a name="263"><span class="lineNum">     263 </span><span class="lineCov">   13087113 :         } else { // white Turn</span></a>
+<a name="264"><span class="lineNum">     264 </span><span class="lineCov">    6767792 :             // White Men Capture</span></a>
+<a name="265"><span class="lineNum">     265 </span><span class="lineCov">    6767792 :             mask = getCaptureMask(whiteMen, whiteKings|blackPieces, blackPieces, CheckersDiff.capture.up.left)</span></a>
+<a name="266"><span class="lineNum">     266 </span><span class="lineCov">    6767792 :             capturePieces(.WhiteMan, mask, CheckersDiff.capture.up.left, &amp;children)</span></a>
+<a name="267"><span class="lineNum">     267 </span><span class="lineCov">    6767792 : </span></a>
+<a name="268"><span class="lineNum">     268 </span><span class="lineCov">    6767792 :             mask = getCaptureMask(whiteMen, whiteKings|blackPieces, blackPieces, CheckersDiff.capture.up.right)</span></a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">    6767792 :             capturePieces(.WhiteMan, mask, CheckersDiff.capture.up.right, &amp;children)</span></a>
+<a name="270"><span class="lineNum">     270 </span><span class="lineCov">    6767792 : </span></a>
+<a name="271"><span class="lineNum">     271 </span><span class="lineCov">    6767792 :             if whiteKings&gt;0 {</span></a>
+<a name="272"><span class="lineNum">     272 </span><span class="lineCov">    1835337 :                 // White Kings Capture</span></a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">    1835337 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.down.left)</span></a>
+<a name="274"><span class="lineNum">     274 </span><span class="lineCov">    1835337 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.down.left, &amp;children)</span></a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">    1835337 : </span></a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">    1835337 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.down.right)</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">    1835337 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.down.right, &amp;children)</span></a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">    1835337 : </span></a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">    1835337 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.up.left)</span></a>
+<a name="280"><span class="lineNum">     280 </span><span class="lineCov">    1835337 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.up.left, &amp;children)</span></a>
+<a name="281"><span class="lineNum">     281 </span><span class="lineCov">    1835337 : </span></a>
+<a name="282"><span class="lineNum">     282 </span><span class="lineCov">    1835337 :                 mask = getCaptureMask(whiteKings, whiteMen|blackPieces, blackPieces, CheckersDiff.capture.up.right)</span></a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">    1835337 :                 capturePieces(.WhiteKing, mask, CheckersDiff.capture.up.right, &amp;children)</span></a>
+<a name="284"><span class="lineNum">     284 </span><span class="lineCov">    6767792 :             }</span></a>
+<a name="285"><span class="lineNum">     285 </span><span class="lineCov">    6767792 : </span></a>
+<a name="286"><span class="lineNum">     286 </span><span class="lineCov">    6767792 :             guard children.isEmpty else { return children }</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">    4732449 : </span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">    4732449 :             // White Men Move</span></a>
+<a name="289"><span class="lineNum">     289 </span><span class="lineCov">    4732449 :             mask = getMoveMask(whiteMen &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.up.left)</span></a>
+<a name="290"><span class="lineNum">     290 </span><span class="lineCov">    4732449 :             movePieces(.WhiteMan, mask, CheckersDiff.move.up.left, &amp;children)</span></a>
+<a name="291"><span class="lineNum">     291 </span><span class="lineCov">    4732449 :             mask = getMoveMask(whiteMen &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.up.right)</span></a>
+<a name="292"><span class="lineNum">     292 </span><span class="lineCov">    4732449 :             movePieces(.WhiteMan, mask, CheckersDiff.move.up.right, &amp;children)</span></a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">    4732449 : </span></a>
+<a name="294"><span class="lineNum">     294 </span><span class="lineCov">    4732449 :             if whiteKings&gt;0 {</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">    1348829 :                 // White Kings Move</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">    1348829 :                 mask = getMoveMask(whiteKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.down.left)</span></a>
+<a name="297"><span class="lineNum">     297 </span><span class="lineCov">    1348829 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.down.left, &amp;children)</span></a>
+<a name="298"><span class="lineNum">     298 </span><span class="lineCov">    1348829 : </span></a>
+<a name="299"><span class="lineNum">     299 </span><span class="lineCov">    1348829 :                 mask = getMoveMask(whiteKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.down.right)</span></a>
+<a name="300"><span class="lineNum">     300 </span><span class="lineCov">    1348829 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.down.right, &amp;children)</span></a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">    1348829 : </span></a>
+<a name="302"><span class="lineNum">     302 </span><span class="lineCov">    1348829 :                 mask = getMoveMask(whiteKings &amp; ~GameState.leftEdge, allPieces, CheckersDiff.move.up.left)</span></a>
+<a name="303"><span class="lineNum">     303 </span><span class="lineCov">    1348829 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.up.left, &amp;children)</span></a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineCov">    1348829 : </span></a>
+<a name="305"><span class="lineNum">     305 </span><span class="lineCov">    1348829 :                 mask = getMoveMask(whiteKings &amp; ~GameState.rightEdge, allPieces, CheckersDiff.move.up.right)</span></a>
+<a name="306"><span class="lineNum">     306 </span><span class="lineCov">    1348829 :                 movePieces(.WhiteKing, mask, CheckersDiff.move.up.right, &amp;children)</span></a>
+<a name="307"><span class="lineNum">     307 </span><span class="lineCov">    4732449 :             }</span></a>
+<a name="308"><span class="lineNum">     308 </span><span class="lineCov">   11051770 :         }</span></a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">   11051770 :         return children</span></a>
+<a name="310"><span class="lineNum">     310 </span><span class="lineCov">   13087113 :     }</span></a>
 <a name="311"><span class="lineNum">     311 </span>            : </a>
 <a name="312"><span class="lineNum">     312 </span>            :     /// Provides mask of pieces of certain type that can move to certain direction.</a>
 <a name="313"><span class="lineNum">     313 </span>            :     /// - Parameters:</a>
@@ -378,10 +378,10 @@
 <a name="316"><span class="lineNum">     316 </span>            :     ///   Eg. if movablePieces is blackMen, nonMovablePieces is blackKings|whitePieces</a>
 <a name="317"><span class="lineNum">     317 </span>            :     ///   - direction: the direction in which move is made.</a>
 <a name="318"><span class="lineNum">     318 </span>            :     /// - Returns: Mask of pieces that can be moved to specified direction.</a>
-<a name="319"><span class="lineNum">     319 </span><span class="lineCov">   36313360 :     func getMoveMask(_ movablePieces: UInt64, _ nonMovablePieces: UInt64, _ direction: CheckersMoveDiff) -&gt; UInt64 {</span></a>
-<a name="320"><span class="lineNum">     320 </span><span class="lineCov">   36313360 :         let diff=direction.rawValue</span></a>
-<a name="321"><span class="lineNum">     321 </span><span class="lineCov">   36313360 :         return (movablePieces&lt;&lt;diff &amp; (~(((movablePieces|nonMovablePieces)))))&gt;&gt;diff</span></a>
-<a name="322"><span class="lineNum">     322 </span><span class="lineCov">   36313360 :     }</span></a>
+<a name="319"><span class="lineNum">     319 </span><span class="lineCov">   36055696 :     func getMoveMask(_ movablePieces: UInt64, _ nonMovablePieces: UInt64, _ direction: CheckersMoveDiff) -&gt; UInt64 {</span></a>
+<a name="320"><span class="lineNum">     320 </span><span class="lineCov">   36055696 :         let diff=direction.rawValue</span></a>
+<a name="321"><span class="lineNum">     321 </span><span class="lineCov">   36055696 :         return (movablePieces&lt;&lt;diff &amp; (~(((movablePieces|nonMovablePieces)))))&gt;&gt;diff</span></a>
+<a name="322"><span class="lineNum">     322 </span><span class="lineCov">   36055696 :     }</span></a>
 <a name="323"><span class="lineNum">     323 </span>            : </a>
 <a name="324"><span class="lineNum">     324 </span>            :     /// Provides mask of the movable pieces that can capture one of the capturable pieces</a>
 <a name="325"><span class="lineNum">     325 </span>            :     /// and then land to a unoccupied square.</a>
@@ -396,152 +396,152 @@
 <a name="334"><span class="lineNum">     334 </span>            :                         _ nonCapturablePieces: UInt64,</a>
 <a name="335"><span class="lineNum">     335 </span>            :                         _ capturablePieces: UInt64,</a>
 <a name="336"><span class="lineNum">     336 </span>            :                         _ direction: (Int, Int)</a>
-<a name="337"><span class="lineNum">     337 </span><span class="lineCov">   52398122 :     ) -&gt; UInt64 {</span></a>
-<a name="338"><span class="lineNum">     338 </span><span class="lineCov">   52398122 :         // move direction is relative to the captured piece, not to the original position</span></a>
-<a name="339"><span class="lineNum">     339 </span><span class="lineCov">   52398122 :         let (captureDiff, postCaptureDiff) = direction</span></a>
-<a name="340"><span class="lineNum">     340 </span><span class="lineCov">   52398122 :         return movablePieces &amp;</span></a>
-<a name="341"><span class="lineNum">     341 </span><span class="lineCov">   52398122 :             ((capturablePieces &amp; GameState.notEdges)&gt;&gt;captureDiff) &amp; ~((allPieces&gt;&gt;postCaptureDiff)&gt;&gt;captureDiff)</span></a>
-<a name="342"><span class="lineNum">     342 </span><span class="lineCov">   52398122 :     }</span></a>
+<a name="337"><span class="lineNum">     337 </span><span class="lineCov">   50903514 :     ) -&gt; UInt64 {</span></a>
+<a name="338"><span class="lineNum">     338 </span><span class="lineCov">   50903514 :         // move direction is relative to the captured piece, not to the original position</span></a>
+<a name="339"><span class="lineNum">     339 </span><span class="lineCov">   50903514 :         let (captureDiff, postCaptureDiff) = direction</span></a>
+<a name="340"><span class="lineNum">     340 </span><span class="lineCov">   50903514 :         return movablePieces &amp;</span></a>
+<a name="341"><span class="lineNum">     341 </span><span class="lineCov">   50903514 :             ((capturablePieces &amp; GameState.notEdges)&gt;&gt;captureDiff) &amp; ~((allPieces&gt;&gt;postCaptureDiff)&gt;&gt;captureDiff)</span></a>
+<a name="342"><span class="lineNum">     342 </span><span class="lineCov">   50903514 :     }</span></a>
 <a name="343"><span class="lineNum">     343 </span>            : </a>
 <a name="344"><span class="lineNum">     344 </span>            :     func capturePieces(</a>
 <a name="345"><span class="lineNum">     345 </span>            :         _ pieceType: CheckersPiece,</a>
 <a name="346"><span class="lineNum">     346 </span>            :         _ mask: UInt64,</a>
 <a name="347"><span class="lineNum">     347 </span>            :         _ diff: (Int, Int),</a>
 <a name="348"><span class="lineNum">     348 </span>            :         _ out: inout Set&lt;GameState&gt;</a>
-<a name="349"><span class="lineNum">     349 </span><span class="lineCov">   52398122 :     ) {</span></a>
-<a name="350"><span class="lineNum">     350 </span><span class="lineCov">   52398122 :         switch pieceType {</span></a>
-<a name="351"><span class="lineNum">     351 </span><span class="lineCov">   52398122 :         case .BlackKing:</span></a>
-<a name="352"><span class="lineNum">     352 </span><span class="lineCov">   11245796 :             for (blackKings, whiteMen, whiteKings) in Capture(</span></a>
-<a name="353"><span class="lineNum">     353 </span><span class="lineCov">   11245796 :                 piecesToMove: blackKings,</span></a>
-<a name="354"><span class="lineNum">     354 </span><span class="lineCov">   11245796 :                 pieceType: .BlackKing,</span></a>
-<a name="355"><span class="lineNum">     355 </span><span class="lineCov">   11245796 :                 capturableMen: whiteMen,</span></a>
-<a name="356"><span class="lineNum">     356 </span><span class="lineCov">   11245796 :                 capturableKings: whiteKings,</span></a>
-<a name="357"><span class="lineNum">     357 </span><span class="lineCov">   11245796 :                 nonCapturablePieces: blackMen,</span></a>
-<a name="358"><span class="lineNum">     358 </span><span class="lineCov">   11245796 :                 mask: mask,</span></a>
-<a name="359"><span class="lineNum">     359 </span><span class="lineCov">   11245796 :                 diff: diff</span></a>
-<a name="360"><span class="lineNum">     360 </span><span class="lineCov">   11245796 :             ) {</span></a>
-<a name="361"><span class="lineNum">     361 </span><span class="lineCov">     345646 :                 out.insert(GameState(</span></a>
-<a name="362"><span class="lineNum">     362 </span><span class="lineCov">     345646 :                             blackMen: blackMen,</span></a>
-<a name="363"><span class="lineNum">     363 </span><span class="lineCov">     345646 :                             blackKings: blackKings,</span></a>
-<a name="364"><span class="lineNum">     364 </span><span class="lineCov">     345646 :                             whiteMen: whiteMen,</span></a>
-<a name="365"><span class="lineNum">     365 </span><span class="lineCov">     345646 :                             whiteKings: whiteKings,</span></a>
-<a name="366"><span class="lineNum">     366 </span><span class="lineCov">     345646 :                             blackTurn: whiteTurn))</span></a>
-<a name="367"><span class="lineNum">     367 </span><span class="lineCov">   52398122 :             }</span></a>
-<a name="368"><span class="lineNum">     368 </span><span class="lineCov">   52398122 :         case .BlackMan:</span></a>
-<a name="369"><span class="lineNum">     369 </span><span class="lineCov">   19022928 :             for (blackMen, whiteMen, whiteKings) in Capture(</span></a>
-<a name="370"><span class="lineNum">     370 </span><span class="lineCov">   19022928 :                 piecesToMove: blackMen,</span></a>
-<a name="371"><span class="lineNum">     371 </span><span class="lineCov">   19022928 :                 pieceType: .BlackMan,</span></a>
-<a name="372"><span class="lineNum">     372 </span><span class="lineCov">   19022928 :                 capturableMen: whiteMen,</span></a>
-<a name="373"><span class="lineNum">     373 </span><span class="lineCov">   19022928 :                 capturableKings: whiteKings,</span></a>
-<a name="374"><span class="lineNum">     374 </span><span class="lineCov">   19022928 :                 nonCapturablePieces: blackKings,</span></a>
-<a name="375"><span class="lineNum">     375 </span><span class="lineCov">   19022928 :                 mask: mask,</span></a>
-<a name="376"><span class="lineNum">     376 </span><span class="lineCov">   19022928 :                 diff: diff</span></a>
-<a name="377"><span class="lineNum">     377 </span><span class="lineCov">   19022928 :             ) {</span></a>
-<a name="378"><span class="lineNum">     378 </span><span class="lineCov">    3149288 :                 let bk=blackKings|(blackMen&amp;GameState.whiteEndMask) // new kings</span></a>
-<a name="379"><span class="lineNum">     379 </span><span class="lineCov">    3149288 :                 let bm=blackMen &amp; ~bk</span></a>
-<a name="380"><span class="lineNum">     380 </span><span class="lineCov">    3149288 :                 out.insert(GameState(</span></a>
-<a name="381"><span class="lineNum">     381 </span><span class="lineCov">    3149288 :                             blackMen: bm,</span></a>
-<a name="382"><span class="lineNum">     382 </span><span class="lineCov">    3149288 :                             blackKings: bk,</span></a>
-<a name="383"><span class="lineNum">     383 </span><span class="lineCov">    3149288 :                             whiteMen: whiteMen,</span></a>
-<a name="384"><span class="lineNum">     384 </span><span class="lineCov">    3149288 :                             whiteKings: whiteKings,</span></a>
-<a name="385"><span class="lineNum">     385 </span><span class="lineCov">    3149288 :                             blackTurn: whiteTurn))</span></a>
-<a name="386"><span class="lineNum">     386 </span><span class="lineCov">   52398122 :             }</span></a>
-<a name="387"><span class="lineNum">     387 </span><span class="lineCov">   52398122 :         case .WhiteKing:</span></a>
-<a name="388"><span class="lineNum">     388 </span><span class="lineCov">    7120212 :             for (whiteKings, blackMen, blackKings) in Capture(</span></a>
-<a name="389"><span class="lineNum">     389 </span><span class="lineCov">    7120212 :                 piecesToMove: whiteKings,</span></a>
-<a name="390"><span class="lineNum">     390 </span><span class="lineCov">    7120212 :                 pieceType: .WhiteKing,</span></a>
-<a name="391"><span class="lineNum">     391 </span><span class="lineCov">    7120212 :                 capturableMen: blackMen,</span></a>
-<a name="392"><span class="lineNum">     392 </span><span class="lineCov">    7120212 :                 capturableKings: blackKings,</span></a>
-<a name="393"><span class="lineNum">     393 </span><span class="lineCov">    7120212 :                 nonCapturablePieces: whiteMen,</span></a>
-<a name="394"><span class="lineNum">     394 </span><span class="lineCov">    7120212 :                 mask: mask,</span></a>
-<a name="395"><span class="lineNum">     395 </span><span class="lineCov">    7120212 :                 diff: diff</span></a>
-<a name="396"><span class="lineNum">     396 </span><span class="lineCov">    7120212 :             ) {</span></a>
-<a name="397"><span class="lineNum">     397 </span><span class="lineCov">     231826 :                 out.insert(GameState(</span></a>
-<a name="398"><span class="lineNum">     398 </span><span class="lineCov">     231826 :                             blackMen: blackMen,</span></a>
-<a name="399"><span class="lineNum">     399 </span><span class="lineCov">     231826 :                             blackKings: blackKings,</span></a>
-<a name="400"><span class="lineNum">     400 </span><span class="lineCov">     231826 :                             whiteMen: whiteMen,</span></a>
-<a name="401"><span class="lineNum">     401 </span><span class="lineCov">     231826 :                             whiteKings: whiteKings,</span></a>
-<a name="402"><span class="lineNum">     402 </span><span class="lineCov">     231826 :                             blackTurn: whiteTurn))</span></a>
-<a name="403"><span class="lineNum">     403 </span><span class="lineCov">   52398122 :             }</span></a>
-<a name="404"><span class="lineNum">     404 </span><span class="lineCov">   52398122 : </span></a>
-<a name="405"><span class="lineNum">     405 </span><span class="lineCov">   52398122 :         case .WhiteMan:</span></a>
-<a name="406"><span class="lineNum">     406 </span><span class="lineCov">   15009186 :             for (whiteMen, blackMen, blackKings) in Capture(</span></a>
-<a name="407"><span class="lineNum">     407 </span><span class="lineCov">   15009186 :                 piecesToMove: whiteMen,</span></a>
-<a name="408"><span class="lineNum">     408 </span><span class="lineCov">   15009186 :                 pieceType: .WhiteMan,</span></a>
-<a name="409"><span class="lineNum">     409 </span><span class="lineCov">   15009186 :                 capturableMen: blackMen,</span></a>
-<a name="410"><span class="lineNum">     410 </span><span class="lineCov">   15009186 :                 capturableKings: blackKings,</span></a>
-<a name="411"><span class="lineNum">     411 </span><span class="lineCov">   15009186 :                 nonCapturablePieces: whiteKings,</span></a>
-<a name="412"><span class="lineNum">     412 </span><span class="lineCov">   15009186 :                 mask: mask,</span></a>
-<a name="413"><span class="lineNum">     413 </span><span class="lineCov">   15009186 :                 diff: diff</span></a>
-<a name="414"><span class="lineNum">     414 </span><span class="lineCov">   15009186 :             ) {</span></a>
-<a name="415"><span class="lineNum">     415 </span><span class="lineCov">    2467384 :                 let wk=whiteKings|(whiteMen&amp;GameState.blackEndMask) // new kings</span></a>
-<a name="416"><span class="lineNum">     416 </span><span class="lineCov">    2467384 :                 let wm=whiteMen &amp; ~wk</span></a>
-<a name="417"><span class="lineNum">     417 </span><span class="lineCov">    2467384 :                 out.insert(GameState(</span></a>
-<a name="418"><span class="lineNum">     418 </span><span class="lineCov">    2467384 :                             blackMen: blackMen,</span></a>
-<a name="419"><span class="lineNum">     419 </span><span class="lineCov">    2467384 :                             blackKings: blackKings,</span></a>
-<a name="420"><span class="lineNum">     420 </span><span class="lineCov">    2467384 :                             whiteMen: wm,</span></a>
-<a name="421"><span class="lineNum">     421 </span><span class="lineCov">    2467384 :                             whiteKings: wk,</span></a>
-<a name="422"><span class="lineNum">     422 </span><span class="lineCov">    2467384 :                             blackTurn: whiteTurn))</span></a>
-<a name="423"><span class="lineNum">     423 </span><span class="lineCov">   52398122 :             }</span></a>
-<a name="424"><span class="lineNum">     424 </span><span class="lineCov">   52398122 : </span></a>
-<a name="425"><span class="lineNum">     425 </span><span class="lineCov">   52398122 :         default:</span></a>
+<a name="349"><span class="lineNum">     349 </span><span class="lineCov">   50903514 :     ) {</span></a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">   50903514 :         switch pieceType {</span></a>
+<a name="351"><span class="lineNum">     351 </span><span class="lineCov">   50903514 :         case .BlackKing:</span></a>
+<a name="352"><span class="lineNum">     352 </span><span class="lineCov">   11750600 :             for (blackKings, whiteMen, whiteKings) in Capture(</span></a>
+<a name="353"><span class="lineNum">     353 </span><span class="lineCov">   11750600 :                 piecesToMove: blackKings,</span></a>
+<a name="354"><span class="lineNum">     354 </span><span class="lineCov">   11750600 :                 pieceType: .BlackKing,</span></a>
+<a name="355"><span class="lineNum">     355 </span><span class="lineCov">   11750600 :                 capturableMen: whiteMen,</span></a>
+<a name="356"><span class="lineNum">     356 </span><span class="lineCov">   11750600 :                 capturableKings: whiteKings,</span></a>
+<a name="357"><span class="lineNum">     357 </span><span class="lineCov">   11750600 :                 nonCapturablePieces: blackMen,</span></a>
+<a name="358"><span class="lineNum">     358 </span><span class="lineCov">   11750600 :                 mask: mask,</span></a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">   11750600 :                 diff: diff</span></a>
+<a name="360"><span class="lineNum">     360 </span><span class="lineCov">   11750600 :             ) {</span></a>
+<a name="361"><span class="lineNum">     361 </span><span class="lineCov">     368808 :                 out.insert(GameState(</span></a>
+<a name="362"><span class="lineNum">     362 </span><span class="lineCov">     368808 :                             blackMen: blackMen,</span></a>
+<a name="363"><span class="lineNum">     363 </span><span class="lineCov">     368808 :                             blackKings: blackKings,</span></a>
+<a name="364"><span class="lineNum">     364 </span><span class="lineCov">     368808 :                             whiteMen: whiteMen,</span></a>
+<a name="365"><span class="lineNum">     365 </span><span class="lineCov">     368808 :                             whiteKings: whiteKings,</span></a>
+<a name="366"><span class="lineNum">     366 </span><span class="lineCov">     368808 :                             blackTurn: whiteTurn))</span></a>
+<a name="367"><span class="lineNum">     367 </span><span class="lineCov">   50903514 :             }</span></a>
+<a name="368"><span class="lineNum">     368 </span><span class="lineCov">   50903514 :         case .BlackMan:</span></a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineCov">   18275982 :             for (blackMen, whiteMen, whiteKings) in Capture(</span></a>
+<a name="370"><span class="lineNum">     370 </span><span class="lineCov">   18275982 :                 piecesToMove: blackMen,</span></a>
+<a name="371"><span class="lineNum">     371 </span><span class="lineCov">   18275982 :                 pieceType: .BlackMan,</span></a>
+<a name="372"><span class="lineNum">     372 </span><span class="lineCov">   18275982 :                 capturableMen: whiteMen,</span></a>
+<a name="373"><span class="lineNum">     373 </span><span class="lineCov">   18275982 :                 capturableKings: whiteKings,</span></a>
+<a name="374"><span class="lineNum">     374 </span><span class="lineCov">   18275982 :                 nonCapturablePieces: blackKings,</span></a>
+<a name="375"><span class="lineNum">     375 </span><span class="lineCov">   18275982 :                 mask: mask,</span></a>
+<a name="376"><span class="lineNum">     376 </span><span class="lineCov">   18275982 :                 diff: diff</span></a>
+<a name="377"><span class="lineNum">     377 </span><span class="lineCov">   18275982 :             ) {</span></a>
+<a name="378"><span class="lineNum">     378 </span><span class="lineCov">    2999744 :                 let bk=blackKings|(blackMen&amp;GameState.whiteEndMask) // new kings</span></a>
+<a name="379"><span class="lineNum">     379 </span><span class="lineCov">    2999744 :                 let bm=blackMen &amp; ~bk</span></a>
+<a name="380"><span class="lineNum">     380 </span><span class="lineCov">    2999744 :                 out.insert(GameState(</span></a>
+<a name="381"><span class="lineNum">     381 </span><span class="lineCov">    2999744 :                             blackMen: bm,</span></a>
+<a name="382"><span class="lineNum">     382 </span><span class="lineCov">    2999744 :                             blackKings: bk,</span></a>
+<a name="383"><span class="lineNum">     383 </span><span class="lineCov">    2999744 :                             whiteMen: whiteMen,</span></a>
+<a name="384"><span class="lineNum">     384 </span><span class="lineCov">    2999744 :                             whiteKings: whiteKings,</span></a>
+<a name="385"><span class="lineNum">     385 </span><span class="lineCov">    2999744 :                             blackTurn: whiteTurn))</span></a>
+<a name="386"><span class="lineNum">     386 </span><span class="lineCov">   50903514 :             }</span></a>
+<a name="387"><span class="lineNum">     387 </span><span class="lineCov">   50903514 :         case .WhiteKing:</span></a>
+<a name="388"><span class="lineNum">     388 </span><span class="lineCov">    7341348 :             for (whiteKings, blackMen, blackKings) in Capture(</span></a>
+<a name="389"><span class="lineNum">     389 </span><span class="lineCov">    7341348 :                 piecesToMove: whiteKings,</span></a>
+<a name="390"><span class="lineNum">     390 </span><span class="lineCov">    7341348 :                 pieceType: .WhiteKing,</span></a>
+<a name="391"><span class="lineNum">     391 </span><span class="lineCov">    7341348 :                 capturableMen: blackMen,</span></a>
+<a name="392"><span class="lineNum">     392 </span><span class="lineCov">    7341348 :                 capturableKings: blackKings,</span></a>
+<a name="393"><span class="lineNum">     393 </span><span class="lineCov">    7341348 :                 nonCapturablePieces: whiteMen,</span></a>
+<a name="394"><span class="lineNum">     394 </span><span class="lineCov">    7341348 :                 mask: mask,</span></a>
+<a name="395"><span class="lineNum">     395 </span><span class="lineCov">    7341348 :                 diff: diff</span></a>
+<a name="396"><span class="lineNum">     396 </span><span class="lineCov">    7341348 :             ) {</span></a>
+<a name="397"><span class="lineNum">     397 </span><span class="lineCov">     219980 :                 out.insert(GameState(</span></a>
+<a name="398"><span class="lineNum">     398 </span><span class="lineCov">     219980 :                             blackMen: blackMen,</span></a>
+<a name="399"><span class="lineNum">     399 </span><span class="lineCov">     219980 :                             blackKings: blackKings,</span></a>
+<a name="400"><span class="lineNum">     400 </span><span class="lineCov">     219980 :                             whiteMen: whiteMen,</span></a>
+<a name="401"><span class="lineNum">     401 </span><span class="lineCov">     219980 :                             whiteKings: whiteKings,</span></a>
+<a name="402"><span class="lineNum">     402 </span><span class="lineCov">     219980 :                             blackTurn: whiteTurn))</span></a>
+<a name="403"><span class="lineNum">     403 </span><span class="lineCov">   50903514 :             }</span></a>
+<a name="404"><span class="lineNum">     404 </span><span class="lineCov">   50903514 : </span></a>
+<a name="405"><span class="lineNum">     405 </span><span class="lineCov">   50903514 :         case .WhiteMan:</span></a>
+<a name="406"><span class="lineNum">     406 </span><span class="lineCov">   13535584 :             for (whiteMen, blackMen, blackKings) in Capture(</span></a>
+<a name="407"><span class="lineNum">     407 </span><span class="lineCov">   13535584 :                 piecesToMove: whiteMen,</span></a>
+<a name="408"><span class="lineNum">     408 </span><span class="lineCov">   13535584 :                 pieceType: .WhiteMan,</span></a>
+<a name="409"><span class="lineNum">     409 </span><span class="lineCov">   13535584 :                 capturableMen: blackMen,</span></a>
+<a name="410"><span class="lineNum">     410 </span><span class="lineCov">   13535584 :                 capturableKings: blackKings,</span></a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineCov">   13535584 :                 nonCapturablePieces: whiteKings,</span></a>
+<a name="412"><span class="lineNum">     412 </span><span class="lineCov">   13535584 :                 mask: mask,</span></a>
+<a name="413"><span class="lineNum">     413 </span><span class="lineCov">   13535584 :                 diff: diff</span></a>
+<a name="414"><span class="lineNum">     414 </span><span class="lineCov">   13535584 :             ) {</span></a>
+<a name="415"><span class="lineNum">     415 </span><span class="lineCov">    2181303 :                 let wk=whiteKings|(whiteMen&amp;GameState.blackEndMask) // new kings</span></a>
+<a name="416"><span class="lineNum">     416 </span><span class="lineCov">    2181303 :                 let wm=whiteMen &amp; ~wk</span></a>
+<a name="417"><span class="lineNum">     417 </span><span class="lineCov">    2181303 :                 out.insert(GameState(</span></a>
+<a name="418"><span class="lineNum">     418 </span><span class="lineCov">    2181303 :                             blackMen: blackMen,</span></a>
+<a name="419"><span class="lineNum">     419 </span><span class="lineCov">    2181303 :                             blackKings: blackKings,</span></a>
+<a name="420"><span class="lineNum">     420 </span><span class="lineCov">    2181303 :                             whiteMen: wm,</span></a>
+<a name="421"><span class="lineNum">     421 </span><span class="lineCov">    2181303 :                             whiteKings: wk,</span></a>
+<a name="422"><span class="lineNum">     422 </span><span class="lineCov">    2181303 :                             blackTurn: whiteTurn))</span></a>
+<a name="423"><span class="lineNum">     423 </span><span class="lineCov">   50903514 :             }</span></a>
+<a name="424"><span class="lineNum">     424 </span><span class="lineCov">   50903514 : </span></a>
+<a name="425"><span class="lineNum">     425 </span><span class="lineCov">   50903514 :         default:</span></a>
 <a name="426"><span class="lineNum">     426 </span><span class="lineNoCov">          0 :             break</span></a>
-<a name="427"><span class="lineNum">     427 </span><span class="lineCov">   52398122 :         }</span></a>
-<a name="428"><span class="lineNum">     428 </span><span class="lineCov">   52398122 :     }</span></a>
+<a name="427"><span class="lineNum">     427 </span><span class="lineCov">   50903514 :         }</span></a>
+<a name="428"><span class="lineNum">     428 </span><span class="lineCov">   50903514 :     }</span></a>
 <a name="429"><span class="lineNum">     429 </span>            : </a>
 <a name="430"><span class="lineNum">     430 </span>            :     func movePieces(</a>
 <a name="431"><span class="lineNum">     431 </span>            :         _ pieceType: CheckersPiece,</a>
 <a name="432"><span class="lineNum">     432 </span>            :         _ mask: UInt64,</a>
 <a name="433"><span class="lineNum">     433 </span>            :         _ moveDiff: CheckersMoveDiff,</a>
 <a name="434"><span class="lineNum">     434 </span>            :         _ out: inout Set&lt;GameState&gt;</a>
-<a name="435"><span class="lineNum">     435 </span><span class="lineCov">   36313360 :     ) {</span></a>
-<a name="436"><span class="lineNum">     436 </span><span class="lineCov">   36313360 :         switch pieceType {</span></a>
-<a name="437"><span class="lineNum">     437 </span><span class="lineCov">   36313360 :         case .BlackKing:</span></a>
-<a name="438"><span class="lineNum">     438 </span><span class="lineCov">    7937704 :             for bk in Move(blackKings, mask, moveDiff) {</span></a>
-<a name="439"><span class="lineNum">     439 </span><span class="lineCov">    5454495 :                 out.insert(GameState(</span></a>
-<a name="440"><span class="lineNum">     440 </span><span class="lineCov">    5454495 :                             blackMen: blackMen,</span></a>
-<a name="441"><span class="lineNum">     441 </span><span class="lineCov">    5454495 :                             blackKings: bk,</span></a>
-<a name="442"><span class="lineNum">     442 </span><span class="lineCov">    5454495 :                             whiteMen: whiteMen,</span></a>
-<a name="443"><span class="lineNum">     443 </span><span class="lineCov">    5454495 :                             whiteKings: whiteKings,</span></a>
-<a name="444"><span class="lineNum">     444 </span><span class="lineCov">    5454495 :                             blackTurn: whiteTurn))</span></a>
-<a name="445"><span class="lineNum">     445 </span><span class="lineCov">   36313360 :             }</span></a>
-<a name="446"><span class="lineNum">     446 </span><span class="lineCov">   36313360 :         case .BlackMan:</span></a>
-<a name="447"><span class="lineNum">     447 </span><span class="lineCov">   43095417 :             for bm in Move(blackMen, mask, moveDiff) {</span></a>
-<a name="448"><span class="lineNum">     448 </span><span class="lineCov">   43095417 :                 let bk=blackKings|(bm&amp;GameState.whiteEndMask) // new kings</span></a>
-<a name="449"><span class="lineNum">     449 </span><span class="lineCov">   43095417 :                 let bm=bm &amp; ~bk</span></a>
-<a name="450"><span class="lineNum">     450 </span><span class="lineCov">   43095417 :                 out.insert(GameState(</span></a>
-<a name="451"><span class="lineNum">     451 </span><span class="lineCov">   43095417 :                             blackMen: bm,</span></a>
-<a name="452"><span class="lineNum">     452 </span><span class="lineCov">   43095417 :                             blackKings: bk,</span></a>
-<a name="453"><span class="lineNum">     453 </span><span class="lineCov">   43095417 :                             whiteMen: whiteMen,</span></a>
-<a name="454"><span class="lineNum">     454 </span><span class="lineCov">   43095417 :                             whiteKings: whiteKings,</span></a>
-<a name="455"><span class="lineNum">     455 </span><span class="lineCov">   43095417 :                             blackTurn: whiteTurn))</span></a>
-<a name="456"><span class="lineNum">     456 </span><span class="lineCov">   43095417 :             }</span></a>
-<a name="457"><span class="lineNum">     457 </span><span class="lineCov">   36313360 :         case .WhiteKing:</span></a>
-<a name="458"><span class="lineNum">     458 </span><span class="lineCov">    4874216 :             for wk in Move(whiteKings, mask, moveDiff) {</span></a>
-<a name="459"><span class="lineNum">     459 </span><span class="lineCov">    3384275 :                 out.insert(GameState(</span></a>
-<a name="460"><span class="lineNum">     460 </span><span class="lineCov">    3384275 :                             blackMen: blackMen,</span></a>
-<a name="461"><span class="lineNum">     461 </span><span class="lineCov">    3384275 :                             blackKings: blackKings,</span></a>
-<a name="462"><span class="lineNum">     462 </span><span class="lineCov">    3384275 :                             whiteMen: whiteMen,</span></a>
-<a name="463"><span class="lineNum">     463 </span><span class="lineCov">    3384275 :                             whiteKings: wk,</span></a>
-<a name="464"><span class="lineNum">     464 </span><span class="lineCov">    3384275 :                             blackTurn: whiteTurn))</span></a>
-<a name="465"><span class="lineNum">     465 </span><span class="lineCov">   36313360 :             }</span></a>
-<a name="466"><span class="lineNum">     466 </span><span class="lineCov">   36313360 : </span></a>
-<a name="467"><span class="lineNum">     467 </span><span class="lineCov">   36313360 :         case .WhiteMan:</span></a>
-<a name="468"><span class="lineNum">     468 </span><span class="lineCov">   34506074 :             for wm in Move(whiteMen, mask, moveDiff) {</span></a>
-<a name="469"><span class="lineNum">     469 </span><span class="lineCov">   34506074 :                 let wk=whiteKings|(wm&amp;GameState.blackEndMask) // new kings</span></a>
-<a name="470"><span class="lineNum">     470 </span><span class="lineCov">   34506074 :                 let wm=wm &amp; ~wk</span></a>
-<a name="471"><span class="lineNum">     471 </span><span class="lineCov">   34506074 :                 out.insert(GameState(</span></a>
-<a name="472"><span class="lineNum">     472 </span><span class="lineCov">   34506074 :                             blackMen: blackMen,</span></a>
-<a name="473"><span class="lineNum">     473 </span><span class="lineCov">   34506074 :                             blackKings: blackKings,</span></a>
-<a name="474"><span class="lineNum">     474 </span><span class="lineCov">   34506074 :                             whiteMen: wm,</span></a>
-<a name="475"><span class="lineNum">     475 </span><span class="lineCov">   34506074 :                             whiteKings: wk,</span></a>
-<a name="476"><span class="lineNum">     476 </span><span class="lineCov">   34506074 :                             blackTurn: whiteTurn))</span></a>
-<a name="477"><span class="lineNum">     477 </span><span class="lineCov">   36313360 :             }</span></a>
-<a name="478"><span class="lineNum">     478 </span><span class="lineCov">   36313360 : </span></a>
-<a name="479"><span class="lineNum">     479 </span><span class="lineCov">   36313360 :         default:</span></a>
+<a name="435"><span class="lineNum">     435 </span><span class="lineCov">   36055696 :     ) {</span></a>
+<a name="436"><span class="lineNum">     436 </span><span class="lineCov">   36055696 :         switch pieceType {</span></a>
+<a name="437"><span class="lineNum">     437 </span><span class="lineCov">   36055696 :         case .BlackKing:</span></a>
+<a name="438"><span class="lineNum">     438 </span><span class="lineCov">    8556840 :             for bk in Move(blackKings, mask, moveDiff) {</span></a>
+<a name="439"><span class="lineNum">     439 </span><span class="lineCov">    6523480 :                 out.insert(GameState(</span></a>
+<a name="440"><span class="lineNum">     440 </span><span class="lineCov">    6523480 :                             blackMen: blackMen,</span></a>
+<a name="441"><span class="lineNum">     441 </span><span class="lineCov">    6523480 :                             blackKings: bk,</span></a>
+<a name="442"><span class="lineNum">     442 </span><span class="lineCov">    6523480 :                             whiteMen: whiteMen,</span></a>
+<a name="443"><span class="lineNum">     443 </span><span class="lineCov">    6523480 :                             whiteKings: whiteKings,</span></a>
+<a name="444"><span class="lineNum">     444 </span><span class="lineCov">    6523480 :                             blackTurn: whiteTurn))</span></a>
+<a name="445"><span class="lineNum">     445 </span><span class="lineCov">   36055696 :             }</span></a>
+<a name="446"><span class="lineNum">     446 </span><span class="lineCov">   36055696 :         case .BlackMan:</span></a>
+<a name="447"><span class="lineNum">     447 </span><span class="lineCov">   40471104 :             for bm in Move(blackMen, mask, moveDiff) {</span></a>
+<a name="448"><span class="lineNum">     448 </span><span class="lineCov">   40471104 :                 let bk=blackKings|(bm&amp;GameState.whiteEndMask) // new kings</span></a>
+<a name="449"><span class="lineNum">     449 </span><span class="lineCov">   40471104 :                 let bm=bm &amp; ~bk</span></a>
+<a name="450"><span class="lineNum">     450 </span><span class="lineCov">   40471104 :                 out.insert(GameState(</span></a>
+<a name="451"><span class="lineNum">     451 </span><span class="lineCov">   40471104 :                             blackMen: bm,</span></a>
+<a name="452"><span class="lineNum">     452 </span><span class="lineCov">   40471104 :                             blackKings: bk,</span></a>
+<a name="453"><span class="lineNum">     453 </span><span class="lineCov">   40471104 :                             whiteMen: whiteMen,</span></a>
+<a name="454"><span class="lineNum">     454 </span><span class="lineCov">   40471104 :                             whiteKings: whiteKings,</span></a>
+<a name="455"><span class="lineNum">     455 </span><span class="lineCov">   40471104 :                             blackTurn: whiteTurn))</span></a>
+<a name="456"><span class="lineNum">     456 </span><span class="lineCov">   40471104 :             }</span></a>
+<a name="457"><span class="lineNum">     457 </span><span class="lineCov">   36055696 :         case .WhiteKing:</span></a>
+<a name="458"><span class="lineNum">     458 </span><span class="lineCov">    5395316 :             for wk in Move(whiteKings, mask, moveDiff) {</span></a>
+<a name="459"><span class="lineNum">     459 </span><span class="lineCov">    4079030 :                 out.insert(GameState(</span></a>
+<a name="460"><span class="lineNum">     460 </span><span class="lineCov">    4079030 :                             blackMen: blackMen,</span></a>
+<a name="461"><span class="lineNum">     461 </span><span class="lineCov">    4079030 :                             blackKings: blackKings,</span></a>
+<a name="462"><span class="lineNum">     462 </span><span class="lineCov">    4079030 :                             whiteMen: whiteMen,</span></a>
+<a name="463"><span class="lineNum">     463 </span><span class="lineCov">    4079030 :                             whiteKings: wk,</span></a>
+<a name="464"><span class="lineNum">     464 </span><span class="lineCov">    4079030 :                             blackTurn: whiteTurn))</span></a>
+<a name="465"><span class="lineNum">     465 </span><span class="lineCov">   36055696 :             }</span></a>
+<a name="466"><span class="lineNum">     466 </span><span class="lineCov">   36055696 : </span></a>
+<a name="467"><span class="lineNum">     467 </span><span class="lineCov">   36055696 :         case .WhiteMan:</span></a>
+<a name="468"><span class="lineNum">     468 </span><span class="lineCov">   31054163 :             for wm in Move(whiteMen, mask, moveDiff) {</span></a>
+<a name="469"><span class="lineNum">     469 </span><span class="lineCov">   31054163 :                 let wk=whiteKings|(wm&amp;GameState.blackEndMask) // new kings</span></a>
+<a name="470"><span class="lineNum">     470 </span><span class="lineCov">   31054163 :                 let wm=wm &amp; ~wk</span></a>
+<a name="471"><span class="lineNum">     471 </span><span class="lineCov">   31054163 :                 out.insert(GameState(</span></a>
+<a name="472"><span class="lineNum">     472 </span><span class="lineCov">   31054163 :                             blackMen: blackMen,</span></a>
+<a name="473"><span class="lineNum">     473 </span><span class="lineCov">   31054163 :                             blackKings: blackKings,</span></a>
+<a name="474"><span class="lineNum">     474 </span><span class="lineCov">   31054163 :                             whiteMen: wm,</span></a>
+<a name="475"><span class="lineNum">     475 </span><span class="lineCov">   31054163 :                             whiteKings: wk,</span></a>
+<a name="476"><span class="lineNum">     476 </span><span class="lineCov">   31054163 :                             blackTurn: whiteTurn))</span></a>
+<a name="477"><span class="lineNum">     477 </span><span class="lineCov">   36055696 :             }</span></a>
+<a name="478"><span class="lineNum">     478 </span><span class="lineCov">   36055696 : </span></a>
+<a name="479"><span class="lineNum">     479 </span><span class="lineCov">   36055696 :         default:</span></a>
 <a name="480"><span class="lineNum">     480 </span><span class="lineNoCov">          0 :             _=1^1// throw RuntimeError(&quot;Empty piece passed as piece to move.&quot;)</span></a>
-<a name="481"><span class="lineNum">     481 </span><span class="lineCov">   36313360 :         }</span></a>
-<a name="482"><span class="lineNum">     482 </span><span class="lineCov">   36313360 :     }</span></a>
+<a name="481"><span class="lineNum">     481 </span><span class="lineCov">   36055696 :         }</span></a>
+<a name="482"><span class="lineNum">     482 </span><span class="lineCov">   36055696 :     }</span></a>
 <a name="483"><span class="lineNum">     483 </span>            : </a>
 <a name="484"><span class="lineNum">     484 </span><span class="lineNoCov">          0 :     public func pieceAt(_ pos: Int) -&gt; CheckersPiece {</span></a>
 <a name="485"><span class="lineNum">     485 </span><span class="lineNoCov">          0 :         if (blackMen&gt;&gt;pos &amp; 1) == 1 {</span></a>
@@ -573,9 +573,9 @@
 <a name="511"><span class="lineNum">     511 </span>            :         let nonCapturablePieces: UInt64</a>
 <a name="512"><span class="lineNum">     512 </span>            :         let mask: UInt64</a>
 <a name="513"><span class="lineNum">     513 </span>            :         let diff: (Int, Int)</a>
-<a name="514"><span class="lineNum">     514 </span><span class="lineCov">   52398122 :         func makeIterator() -&gt; CaptureIterator {</span></a>
-<a name="515"><span class="lineNum">     515 </span><span class="lineCov">   52398122 :             return CaptureIterator(self)</span></a>
-<a name="516"><span class="lineNum">     516 </span><span class="lineCov">   52398122 :         }</span></a>
+<a name="514"><span class="lineNum">     514 </span><span class="lineCov">   50903514 :         func makeIterator() -&gt; CaptureIterator {</span></a>
+<a name="515"><span class="lineNum">     515 </span><span class="lineCov">   50903514 :             return CaptureIterator(self)</span></a>
+<a name="516"><span class="lineNum">     516 </span><span class="lineCov">   50903514 :         }</span></a>
 <a name="517"><span class="lineNum">     517 </span>            :     }</a>
 <a name="518"><span class="lineNum">     518 </span>            : </a>
 <a name="519"><span class="lineNum">     519 </span>            :     struct CaptureIterator: IteratorProtocol {</a>
@@ -588,111 +588,111 @@
 <a name="526"><span class="lineNum">     526 </span>            :         private let capturableMen: UInt64</a>
 <a name="527"><span class="lineNum">     527 </span>            :         private let capturableKings: UInt64</a>
 <a name="528"><span class="lineNum">     528 </span>            :         private let nonCapturablePieces: UInt64</a>
-<a name="529"><span class="lineNum">     529 </span><span class="lineCov">   52398122 :         private var chainedCaptures: [(UInt64, UInt64, UInt64)]=[]</span></a>
+<a name="529"><span class="lineNum">     529 </span><span class="lineCov">   50903514 :         private var chainedCaptures: [(UInt64, UInt64, UInt64)]=[]</span></a>
 <a name="530"><span class="lineNum">     530 </span>            :         private var legalCaptureDiffs: [(Int, Int)]</a>
 <a name="531"><span class="lineNum">     531 </span>            :         private var pos: Int=0</a>
 <a name="532"><span class="lineNum">     532 </span>            :         private var moveDiff: Int</a>
 <a name="533"><span class="lineNum">     533 </span>            : </a>
-<a name="534"><span class="lineNum">     534 </span><span class="lineCov">   52398122 :         init(_ capture: Capture) {</span></a>
-<a name="535"><span class="lineNum">     535 </span><span class="lineCov">   52398122 :             self.moveMask=(1&lt;&lt;(capture.diff.0+capture.diff.1)) | 1</span></a>
-<a name="536"><span class="lineNum">     536 </span><span class="lineCov">   52398122 :             self.moveDiff=capture.diff.1+capture.diff.0</span></a>
-<a name="537"><span class="lineNum">     537 </span><span class="lineCov">   52398122 :             if moveDiff&gt;0 {</span></a>
-<a name="538"><span class="lineNum">     538 </span><span class="lineCov">   28205932 :                 from=1</span></a>
-<a name="539"><span class="lineNum">     539 </span><span class="lineCov">   28205932 :                 to=1&lt;&lt;moveDiff</span></a>
-<a name="540"><span class="lineNum">     540 </span><span class="lineCov">   28205932 :                 self.iteratorMask = capture.mask</span></a>
-<a name="541"><span class="lineNum">     541 </span><span class="lineCov">   28205932 :                 self.captureMask=1&lt;&lt;capture.diff.0</span></a>
-<a name="542"><span class="lineNum">     542 </span><span class="lineCov">   52398122 :             } else { // white</span></a>
-<a name="543"><span class="lineNum">     543 </span><span class="lineCov">   24192190 :                 from = (1&lt;&lt;abs(moveDiff))</span></a>
-<a name="544"><span class="lineNum">     544 </span><span class="lineCov">   24192190 :                 to = 1</span></a>
-<a name="545"><span class="lineNum">     545 </span><span class="lineCov">   24192190 :                 self.iteratorMask = capture.mask&gt;&gt;abs(moveDiff)</span></a>
-<a name="546"><span class="lineNum">     546 </span><span class="lineCov">   24192190 :                 self.captureMask=1&lt;&lt;abs(capture.diff.0)</span></a>
-<a name="547"><span class="lineNum">     547 </span><span class="lineCov">   52398122 :             }</span></a>
-<a name="548"><span class="lineNum">     548 </span><span class="lineCov">   52398122 :             self.piecesToMove=capture.piecesToMove</span></a>
-<a name="549"><span class="lineNum">     549 </span><span class="lineCov">   52398122 :             self.capturableMen=capture.capturableMen</span></a>
-<a name="550"><span class="lineNum">     550 </span><span class="lineCov">   52398122 :             self.capturableKings=capture.capturableKings</span></a>
-<a name="551"><span class="lineNum">     551 </span><span class="lineCov">   52398122 :             self.nonCapturablePieces=capture.nonCapturablePieces</span></a>
-<a name="552"><span class="lineNum">     552 </span><span class="lineCov">   52398122 :             self.legalCaptureDiffs=legalJumpDirections[capture.pieceType]!</span></a>
-<a name="553"><span class="lineNum">     553 </span><span class="lineCov">   52398122 :         }</span></a>
+<a name="534"><span class="lineNum">     534 </span><span class="lineCov">   50903514 :         init(_ capture: Capture) {</span></a>
+<a name="535"><span class="lineNum">     535 </span><span class="lineCov">   50903514 :             self.moveMask=(1&lt;&lt;(capture.diff.0+capture.diff.1)) | 1</span></a>
+<a name="536"><span class="lineNum">     536 </span><span class="lineCov">   50903514 :             self.moveDiff=capture.diff.1+capture.diff.0</span></a>
+<a name="537"><span class="lineNum">     537 </span><span class="lineCov">   50903514 :             if moveDiff&gt;0 {</span></a>
+<a name="538"><span class="lineNum">     538 </span><span class="lineCov">   27821956 :                 from=1</span></a>
+<a name="539"><span class="lineNum">     539 </span><span class="lineCov">   27821956 :                 to=1&lt;&lt;moveDiff</span></a>
+<a name="540"><span class="lineNum">     540 </span><span class="lineCov">   27821956 :                 self.iteratorMask = capture.mask</span></a>
+<a name="541"><span class="lineNum">     541 </span><span class="lineCov">   27821956 :                 self.captureMask=1&lt;&lt;capture.diff.0</span></a>
+<a name="542"><span class="lineNum">     542 </span><span class="lineCov">   50903514 :             } else { // white</span></a>
+<a name="543"><span class="lineNum">     543 </span><span class="lineCov">   23081558 :                 from = (1&lt;&lt;abs(moveDiff))</span></a>
+<a name="544"><span class="lineNum">     544 </span><span class="lineCov">   23081558 :                 to = 1</span></a>
+<a name="545"><span class="lineNum">     545 </span><span class="lineCov">   23081558 :                 self.iteratorMask = capture.mask&gt;&gt;abs(moveDiff)</span></a>
+<a name="546"><span class="lineNum">     546 </span><span class="lineCov">   23081558 :                 self.captureMask=1&lt;&lt;abs(capture.diff.0)</span></a>
+<a name="547"><span class="lineNum">     547 </span><span class="lineCov">   50903514 :             }</span></a>
+<a name="548"><span class="lineNum">     548 </span><span class="lineCov">   50903514 :             self.piecesToMove=capture.piecesToMove</span></a>
+<a name="549"><span class="lineNum">     549 </span><span class="lineCov">   50903514 :             self.capturableMen=capture.capturableMen</span></a>
+<a name="550"><span class="lineNum">     550 </span><span class="lineCov">   50903514 :             self.capturableKings=capture.capturableKings</span></a>
+<a name="551"><span class="lineNum">     551 </span><span class="lineCov">   50903514 :             self.nonCapturablePieces=capture.nonCapturablePieces</span></a>
+<a name="552"><span class="lineNum">     552 </span><span class="lineCov">   50903514 :             self.legalCaptureDiffs=legalJumpDirections[capture.pieceType]!</span></a>
+<a name="553"><span class="lineNum">     553 </span><span class="lineCov">   50903514 :         }</span></a>
 <a name="554"><span class="lineNum">     554 </span>            : </a>
-<a name="555"><span class="lineNum">     555 </span><span class="lineCov">   58592266 :         mutating func next() -&gt; (UInt64, UInt64, UInt64)? {</span></a>
-<a name="556"><span class="lineNum">     556 </span><span class="lineCov">   58592266 :             guard chainedCaptures.isEmpty else {</span></a>
-<a name="557"><span class="lineNum">     557 </span><span class="lineCov">      70911 :                 return chainedCaptures.removeFirst()</span></a>
-<a name="558"><span class="lineNum">     558 </span><span class="lineCov">   58521355 :             }</span></a>
-<a name="559"><span class="lineNum">     559 </span><span class="lineCov">   58521355 :             guard iteratorMask &gt; 0</span></a>
-<a name="560"><span class="lineNum">     560 </span><span class="lineCov">   58521355 :                 else { return nil }</span></a>
-<a name="561"><span class="lineNum">     561 </span><span class="lineCov">    6123233 : </span></a>
-<a name="562"><span class="lineNum">     562 </span><span class="lineCov">    6123233 :             pos+=iteratorMask.trailingZeroBitCount</span></a>
-<a name="563"><span class="lineNum">     563 </span><span class="lineCov">    6123233 :             from&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
-<a name="564"><span class="lineNum">     564 </span><span class="lineCov">    6123233 :             to&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
-<a name="565"><span class="lineNum">     565 </span><span class="lineCov">    6123233 :             captureMask&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
-<a name="566"><span class="lineNum">     566 </span><span class="lineCov">    6123233 :             iteratorMask&gt;&gt;=iteratorMask.trailingZeroBitCount</span></a>
-<a name="567"><span class="lineNum">     567 </span><span class="lineCov">    6123233 :             iteratorMask^=1</span></a>
-<a name="568"><span class="lineNum">     568 </span><span class="lineCov">    6123233 : </span></a>
-<a name="569"><span class="lineNum">     569 </span><span class="lineCov">    6123233 :             let foundChainedCaptureStep=((piecesToMove &amp; (~from)) | to,</span></a>
-<a name="570"><span class="lineNum">     570 </span><span class="lineCov">    6123233 :                    capturableMen &amp; ~captureMask,</span></a>
-<a name="571"><span class="lineNum">     571 </span><span class="lineCov">    6123233 :                    capturableKings &amp; ~captureMask)</span></a>
-<a name="572"><span class="lineNum">     572 </span><span class="lineCov">    6123233 :             let foundChainedCaptures = checkForChainedCaptures(</span></a>
-<a name="573"><span class="lineNum">     573 </span><span class="lineCov">    6123233 :                 pos+moveDiff,</span></a>
-<a name="574"><span class="lineNum">     574 </span><span class="lineCov">    6123233 :                 foundChainedCaptureStep.0,</span></a>
-<a name="575"><span class="lineNum">     575 </span><span class="lineCov">    6123233 :                 foundChainedCaptureStep.1,</span></a>
-<a name="576"><span class="lineNum">     576 </span><span class="lineCov">    6123233 :                 foundChainedCaptureStep.2)</span></a>
-<a name="577"><span class="lineNum">     577 </span><span class="lineCov">    6123233 :             return foundChainedCaptures ? chainedCaptures.removeFirst() : foundChainedCaptureStep</span></a>
-<a name="578"><span class="lineNum">     578 </span><span class="lineCov">   58521355 :         }</span></a>
+<a name="555"><span class="lineNum">     555 </span><span class="lineCov">   56673349 :         mutating func next() -&gt; (UInt64, UInt64, UInt64)? {</span></a>
+<a name="556"><span class="lineNum">     556 </span><span class="lineCov">   56673349 :             guard chainedCaptures.isEmpty else {</span></a>
+<a name="557"><span class="lineNum">     557 </span><span class="lineCov">      77046 :                 return chainedCaptures.removeFirst()</span></a>
+<a name="558"><span class="lineNum">     558 </span><span class="lineCov">   56596303 :             }</span></a>
+<a name="559"><span class="lineNum">     559 </span><span class="lineCov">   56596303 :             guard iteratorMask &gt; 0</span></a>
+<a name="560"><span class="lineNum">     560 </span><span class="lineCov">   56596303 :                 else { return nil }</span></a>
+<a name="561"><span class="lineNum">     561 </span><span class="lineCov">    5692789 : </span></a>
+<a name="562"><span class="lineNum">     562 </span><span class="lineCov">    5692789 :             pos+=iteratorMask.trailingZeroBitCount</span></a>
+<a name="563"><span class="lineNum">     563 </span><span class="lineCov">    5692789 :             from&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
+<a name="564"><span class="lineNum">     564 </span><span class="lineCov">    5692789 :             to&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
+<a name="565"><span class="lineNum">     565 </span><span class="lineCov">    5692789 :             captureMask&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
+<a name="566"><span class="lineNum">     566 </span><span class="lineCov">    5692789 :             iteratorMask&gt;&gt;=iteratorMask.trailingZeroBitCount</span></a>
+<a name="567"><span class="lineNum">     567 </span><span class="lineCov">    5692789 :             iteratorMask^=1</span></a>
+<a name="568"><span class="lineNum">     568 </span><span class="lineCov">    5692789 : </span></a>
+<a name="569"><span class="lineNum">     569 </span><span class="lineCov">    5692789 :             let foundChainedCaptureStep=((piecesToMove &amp; (~from)) | to,</span></a>
+<a name="570"><span class="lineNum">     570 </span><span class="lineCov">    5692789 :                    capturableMen &amp; ~captureMask,</span></a>
+<a name="571"><span class="lineNum">     571 </span><span class="lineCov">    5692789 :                    capturableKings &amp; ~captureMask)</span></a>
+<a name="572"><span class="lineNum">     572 </span><span class="lineCov">    5692789 :             let foundChainedCaptures = checkForChainedCaptures(</span></a>
+<a name="573"><span class="lineNum">     573 </span><span class="lineCov">    5692789 :                 pos+moveDiff,</span></a>
+<a name="574"><span class="lineNum">     574 </span><span class="lineCov">    5692789 :                 foundChainedCaptureStep.0,</span></a>
+<a name="575"><span class="lineNum">     575 </span><span class="lineCov">    5692789 :                 foundChainedCaptureStep.1,</span></a>
+<a name="576"><span class="lineNum">     576 </span><span class="lineCov">    5692789 :                 foundChainedCaptureStep.2)</span></a>
+<a name="577"><span class="lineNum">     577 </span><span class="lineCov">    5692789 :             return foundChainedCaptures ? chainedCaptures.removeFirst() : foundChainedCaptureStep</span></a>
+<a name="578"><span class="lineNum">     578 </span><span class="lineCov">   56596303 :         }</span></a>
 <a name="579"><span class="lineNum">     579 </span>            : </a>
 <a name="580"><span class="lineNum">     580 </span>            :         private mutating func checkForChainedCaptures(</a>
 <a name="581"><span class="lineNum">     581 </span>            :             _ pos: Int,</a>
 <a name="582"><span class="lineNum">     582 </span>            :             _ movablePieces: UInt64,</a>
 <a name="583"><span class="lineNum">     583 </span>            :             _ opponentMen: UInt64,</a>
 <a name="584"><span class="lineNum">     584 </span>            :             _ opponentKings: UInt64</a>
-<a name="585"><span class="lineNum">     585 </span><span class="lineCov">    7049131 :         ) -&gt; Bool {</span></a>
-<a name="586"><span class="lineNum">     586 </span><span class="lineCov">    7049131 :             var foundChainedCaptures: Bool=false</span></a>
-<a name="587"><span class="lineNum">     587 </span><span class="lineCov">   15436082 :             for (captureDiff, moveDiff) in legalCaptureDiffs {</span></a>
-<a name="588"><span class="lineNum">     588 </span><span class="lineCov">   15436082 :                 let freeSquares = ~(movablePieces|nonCapturablePieces|opponentMen|opponentKings)</span></a>
-<a name="589"><span class="lineNum">     589 </span><span class="lineCov">   15436082 :                 if freeSquares[pos+captureDiff+moveDiff] &amp;&amp; GameState.notEdges[pos+captureDiff] {</span></a>
-<a name="590"><span class="lineNum">     590 </span><span class="lineCov">    4368983 :                     if opponentMen[pos+captureDiff] {</span></a>
-<a name="591"><span class="lineNum">     591 </span><span class="lineCov">     909981 :                         foundChainedCaptures=true</span></a>
-<a name="592"><span class="lineNum">     592 </span><span class="lineCov">     909981 :                         var newOpponentMen=opponentMen</span></a>
-<a name="593"><span class="lineNum">     593 </span><span class="lineCov">     909981 :                         newOpponentMen[pos+captureDiff]=false</span></a>
-<a name="594"><span class="lineNum">     594 </span><span class="lineCov">     909981 :                         var newMovablePieces=movablePieces</span></a>
-<a name="595"><span class="lineNum">     595 </span><span class="lineCov">     909981 :                         newMovablePieces[pos+moveDiff+captureDiff]=true</span></a>
-<a name="596"><span class="lineNum">     596 </span><span class="lineCov">     909981 :                         newMovablePieces[pos]=false</span></a>
-<a name="597"><span class="lineNum">     597 </span><span class="lineCov">     909981 :                         let foundMoreChainedCaptures = checkForChainedCaptures(</span></a>
-<a name="598"><span class="lineNum">     598 </span><span class="lineCov">     909981 :                             pos+moveDiff+captureDiff,</span></a>
-<a name="599"><span class="lineNum">     599 </span><span class="lineCov">     909981 :                             newMovablePieces,</span></a>
-<a name="600"><span class="lineNum">     600 </span><span class="lineCov">     909981 :                             newOpponentMen,</span></a>
-<a name="601"><span class="lineNum">     601 </span><span class="lineCov">     909981 :                             opponentKings)</span></a>
-<a name="602"><span class="lineNum">     602 </span><span class="lineCov">     909981 :                         if !foundMoreChainedCaptures {</span></a>
-<a name="603"><span class="lineNum">     603 </span><span class="lineCov">     868179 :                             self.chainedCaptures.append((newMovablePieces, newOpponentMen, opponentKings))</span></a>
-<a name="604"><span class="lineNum">     604 </span><span class="lineCov">     868179 :                             foundChainedCaptures=true</span></a>
-<a name="605"><span class="lineNum">     605 </span><span class="lineCov">     909981 :                         }</span></a>
-<a name="606"><span class="lineNum">     606 </span><span class="lineCov">     909981 :                         foundChainedCaptures=foundChainedCaptures||foundMoreChainedCaptures</span></a>
-<a name="607"><span class="lineNum">     607 </span><span class="lineCov">    4368983 :                     } else if opponentKings[pos+captureDiff] {</span></a>
-<a name="608"><span class="lineNum">     608 </span><span class="lineCov">      15917 :                         foundChainedCaptures=true</span></a>
-<a name="609"><span class="lineNum">     609 </span><span class="lineCov">      15917 :                         var newOpponentKings=opponentKings</span></a>
-<a name="610"><span class="lineNum">     610 </span><span class="lineCov">      15917 :                         newOpponentKings[pos+captureDiff]=false</span></a>
-<a name="611"><span class="lineNum">     611 </span><span class="lineCov">      15917 :                         var newMovalbePieces=movablePieces</span></a>
-<a name="612"><span class="lineNum">     612 </span><span class="lineCov">      15917 :                         newMovalbePieces[pos+moveDiff+captureDiff]=true</span></a>
-<a name="613"><span class="lineNum">     613 </span><span class="lineCov">      15917 :                         newMovalbePieces[pos]=false</span></a>
-<a name="614"><span class="lineNum">     614 </span><span class="lineCov">      15917 :                         foundChainedCaptures=foundChainedCaptures||checkForChainedCaptures(</span></a>
+<a name="585"><span class="lineNum">     585 </span><span class="lineCov">    6637930 :         ) -&gt; Bool {</span></a>
+<a name="586"><span class="lineNum">     586 </span><span class="lineCov">    6637930 :             var foundChainedCaptures: Bool=false</span></a>
+<a name="587"><span class="lineNum">     587 </span><span class="lineCov">   14621548 :             for (captureDiff, moveDiff) in legalCaptureDiffs {</span></a>
+<a name="588"><span class="lineNum">     588 </span><span class="lineCov">   14621548 :                 let freeSquares = ~(movablePieces|nonCapturablePieces|opponentMen|opponentKings)</span></a>
+<a name="589"><span class="lineNum">     589 </span><span class="lineCov">   14621548 :                 if freeSquares[pos+captureDiff+moveDiff] &amp;&amp; GameState.notEdges[pos+captureDiff] {</span></a>
+<a name="590"><span class="lineNum">     590 </span><span class="lineCov">    4153016 :                     if opponentMen[pos+captureDiff] {</span></a>
+<a name="591"><span class="lineNum">     591 </span><span class="lineCov">     933659 :                         foundChainedCaptures=true</span></a>
+<a name="592"><span class="lineNum">     592 </span><span class="lineCov">     933659 :                         var newOpponentMen=opponentMen</span></a>
+<a name="593"><span class="lineNum">     593 </span><span class="lineCov">     933659 :                         newOpponentMen[pos+captureDiff]=false</span></a>
+<a name="594"><span class="lineNum">     594 </span><span class="lineCov">     933659 :                         var newMovablePieces=movablePieces</span></a>
+<a name="595"><span class="lineNum">     595 </span><span class="lineCov">     933659 :                         newMovablePieces[pos+moveDiff+captureDiff]=true</span></a>
+<a name="596"><span class="lineNum">     596 </span><span class="lineCov">     933659 :                         newMovablePieces[pos]=false</span></a>
+<a name="597"><span class="lineNum">     597 </span><span class="lineCov">     933659 :                         let foundMoreChainedCaptures = checkForChainedCaptures(</span></a>
+<a name="598"><span class="lineNum">     598 </span><span class="lineCov">     933659 :                             pos+moveDiff+captureDiff,</span></a>
+<a name="599"><span class="lineNum">     599 </span><span class="lineCov">     933659 :                             newMovablePieces,</span></a>
+<a name="600"><span class="lineNum">     600 </span><span class="lineCov">     933659 :                             newOpponentMen,</span></a>
+<a name="601"><span class="lineNum">     601 </span><span class="lineCov">     933659 :                             opponentKings)</span></a>
+<a name="602"><span class="lineNum">     602 </span><span class="lineCov">     933659 :                         if !foundMoreChainedCaptures {</span></a>
+<a name="603"><span class="lineNum">     603 </span><span class="lineCov">     893490 :                             self.chainedCaptures.append((newMovablePieces, newOpponentMen, opponentKings))</span></a>
+<a name="604"><span class="lineNum">     604 </span><span class="lineCov">     893490 :                             foundChainedCaptures=true</span></a>
+<a name="605"><span class="lineNum">     605 </span><span class="lineCov">     933659 :                         }</span></a>
+<a name="606"><span class="lineNum">     606 </span><span class="lineCov">     933659 :                         foundChainedCaptures=foundChainedCaptures||foundMoreChainedCaptures</span></a>
+<a name="607"><span class="lineNum">     607 </span><span class="lineCov">    4153016 :                     } else if opponentKings[pos+captureDiff] {</span></a>
+<a name="608"><span class="lineNum">     608 </span><span class="lineCov">      11482 :                         foundChainedCaptures=true</span></a>
+<a name="609"><span class="lineNum">     609 </span><span class="lineCov">      11482 :                         var newOpponentKings=opponentKings</span></a>
+<a name="610"><span class="lineNum">     610 </span><span class="lineCov">      11482 :                         newOpponentKings[pos+captureDiff]=false</span></a>
+<a name="611"><span class="lineNum">     611 </span><span class="lineCov">      11482 :                         var newMovalbePieces=movablePieces</span></a>
+<a name="612"><span class="lineNum">     612 </span><span class="lineCov">      11482 :                         newMovalbePieces[pos+moveDiff+captureDiff]=true</span></a>
+<a name="613"><span class="lineNum">     613 </span><span class="lineCov">      11482 :                         newMovalbePieces[pos]=false</span></a>
+<a name="614"><span class="lineNum">     614 </span><span class="lineCov">      11482 :                         foundChainedCaptures=foundChainedCaptures||checkForChainedCaptures(</span></a>
 <a name="615"><span class="lineNum">     615 </span><span class="lineNoCov">          0 :                             pos+moveDiff+captureDiff,</span></a>
 <a name="616"><span class="lineNum">     616 </span><span class="lineNoCov">          0 :                             newMovalbePieces,</span></a>
 <a name="617"><span class="lineNum">     617 </span><span class="lineNoCov">          0 :                             opponentMen,</span></a>
 <a name="618"><span class="lineNum">     618 </span><span class="lineNoCov">          0 :                             newOpponentKings)</span></a>
-<a name="619"><span class="lineNum">     619 </span><span class="lineCov">      15917 :                         let foundMoreChainedCaptures = checkForChainedCaptures(</span></a>
-<a name="620"><span class="lineNum">     620 </span><span class="lineCov">      15917 :                             pos+moveDiff+captureDiff,</span></a>
-<a name="621"><span class="lineNum">     621 </span><span class="lineCov">      15917 :                             newMovalbePieces,</span></a>
-<a name="622"><span class="lineNum">     622 </span><span class="lineCov">      15917 :                             opponentMen,</span></a>
-<a name="623"><span class="lineNum">     623 </span><span class="lineCov">      15917 :                             newOpponentKings)</span></a>
-<a name="624"><span class="lineNum">     624 </span><span class="lineCov">      15917 :                         if !foundMoreChainedCaptures {</span></a>
-<a name="625"><span class="lineNum">     625 </span><span class="lineCov">      13194 :                             self.chainedCaptures.append((newMovalbePieces, opponentMen, newOpponentKings))</span></a>
-<a name="626"><span class="lineNum">     626 </span><span class="lineCov">      13194 :                             foundChainedCaptures=true</span></a>
-<a name="627"><span class="lineNum">     627 </span><span class="lineCov">      15917 :                         }</span></a>
-<a name="628"><span class="lineNum">     628 </span><span class="lineCov">      15917 :                         foundChainedCaptures=foundChainedCaptures||foundMoreChainedCaptures</span></a>
-<a name="629"><span class="lineNum">     629 </span><span class="lineCov">    4368983 :                     }</span></a>
-<a name="630"><span class="lineNum">     630 </span><span class="lineCov">   15436082 :                 }</span></a>
-<a name="631"><span class="lineNum">     631 </span><span class="lineCov">   15436082 :             }</span></a>
-<a name="632"><span class="lineNum">     632 </span><span class="lineCov">    7049131 :             return foundChainedCaptures</span></a>
-<a name="633"><span class="lineNum">     633 </span><span class="lineCov">    7049131 :         }</span></a>
+<a name="619"><span class="lineNum">     619 </span><span class="lineCov">      11482 :                         let foundMoreChainedCaptures = checkForChainedCaptures(</span></a>
+<a name="620"><span class="lineNum">     620 </span><span class="lineCov">      11482 :                             pos+moveDiff+captureDiff,</span></a>
+<a name="621"><span class="lineNum">     621 </span><span class="lineCov">      11482 :                             newMovalbePieces,</span></a>
+<a name="622"><span class="lineNum">     622 </span><span class="lineCov">      11482 :                             opponentMen,</span></a>
+<a name="623"><span class="lineNum">     623 </span><span class="lineCov">      11482 :                             newOpponentKings)</span></a>
+<a name="624"><span class="lineNum">     624 </span><span class="lineCov">      11482 :                         if !foundMoreChainedCaptures {</span></a>
+<a name="625"><span class="lineNum">     625 </span><span class="lineCov">      10413 :                             self.chainedCaptures.append((newMovalbePieces, opponentMen, newOpponentKings))</span></a>
+<a name="626"><span class="lineNum">     626 </span><span class="lineCov">      10413 :                             foundChainedCaptures=true</span></a>
+<a name="627"><span class="lineNum">     627 </span><span class="lineCov">      11482 :                         }</span></a>
+<a name="628"><span class="lineNum">     628 </span><span class="lineCov">      11482 :                         foundChainedCaptures=foundChainedCaptures||foundMoreChainedCaptures</span></a>
+<a name="629"><span class="lineNum">     629 </span><span class="lineCov">    4153016 :                     }</span></a>
+<a name="630"><span class="lineNum">     630 </span><span class="lineCov">   14621548 :                 }</span></a>
+<a name="631"><span class="lineNum">     631 </span><span class="lineCov">   14621548 :             }</span></a>
+<a name="632"><span class="lineNum">     632 </span><span class="lineCov">    6637930 :             return foundChainedCaptures</span></a>
+<a name="633"><span class="lineNum">     633 </span><span class="lineCov">    6637930 :         }</span></a>
 <a name="634"><span class="lineNum">     634 </span>            : </a>
 <a name="635"><span class="lineNum">     635 </span>            :     }</a>
 <a name="636"><span class="lineNum">     636 </span>            : </a>
@@ -700,14 +700,14 @@
 <a name="638"><span class="lineNum">     638 </span>            :         let piecesToMove: UInt64</a>
 <a name="639"><span class="lineNum">     639 </span>            :         let mask: UInt64</a>
 <a name="640"><span class="lineNum">     640 </span>            :         let diff: CheckersMoveDiff</a>
-<a name="641"><span class="lineNum">     641 </span><span class="lineCov">   36313360 :         init(_ piecesToMove: UInt64, _ mask: UInt64, _ diff: CheckersMoveDiff) {</span></a>
-<a name="642"><span class="lineNum">     642 </span><span class="lineCov">   36313360 :             self.piecesToMove=piecesToMove</span></a>
-<a name="643"><span class="lineNum">     643 </span><span class="lineCov">   36313360 :             self.mask=mask</span></a>
-<a name="644"><span class="lineNum">     644 </span><span class="lineCov">   36313360 :             self.diff=diff</span></a>
-<a name="645"><span class="lineNum">     645 </span><span class="lineCov">   36313360 :         }</span></a>
-<a name="646"><span class="lineNum">     646 </span><span class="lineCov">   36313360 :         func makeIterator() -&gt; MoveIterator {</span></a>
-<a name="647"><span class="lineNum">     647 </span><span class="lineCov">   36313360 :             return MoveIterator(self)</span></a>
-<a name="648"><span class="lineNum">     648 </span><span class="lineCov">   36313360 :         }</span></a>
+<a name="641"><span class="lineNum">     641 </span><span class="lineCov">   36055696 :         init(_ piecesToMove: UInt64, _ mask: UInt64, _ diff: CheckersMoveDiff) {</span></a>
+<a name="642"><span class="lineNum">     642 </span><span class="lineCov">   36055696 :             self.piecesToMove=piecesToMove</span></a>
+<a name="643"><span class="lineNum">     643 </span><span class="lineCov">   36055696 :             self.mask=mask</span></a>
+<a name="644"><span class="lineNum">     644 </span><span class="lineCov">   36055696 :             self.diff=diff</span></a>
+<a name="645"><span class="lineNum">     645 </span><span class="lineCov">   36055696 :         }</span></a>
+<a name="646"><span class="lineNum">     646 </span><span class="lineCov">   36055696 :         func makeIterator() -&gt; MoveIterator {</span></a>
+<a name="647"><span class="lineNum">     647 </span><span class="lineCov">   36055696 :             return MoveIterator(self)</span></a>
+<a name="648"><span class="lineNum">     648 </span><span class="lineCov">   36055696 :         }</span></a>
 <a name="649"><span class="lineNum">     649 </span>            :     }</a>
 <a name="650"><span class="lineNum">     650 </span>            : </a>
 <a name="651"><span class="lineNum">     651 </span>            :     struct MoveIterator: IteratorProtocol {</a>
@@ -716,30 +716,30 @@
 <a name="654"><span class="lineNum">     654 </span>            :         private var iteratorMask: UInt64</a>
 <a name="655"><span class="lineNum">     655 </span>            :         private let piecesToMove: UInt64</a>
 <a name="656"><span class="lineNum">     656 </span>            : </a>
-<a name="657"><span class="lineNum">     657 </span><span class="lineCov">   36313360 :         init(_ move: Move) {</span></a>
-<a name="658"><span class="lineNum">     658 </span><span class="lineCov">   36313360 :             // mask has the pieces in original places</span></a>
-<a name="659"><span class="lineNum">     659 </span><span class="lineCov">   36313360 :             if move.diff.rawValue&gt;0 {</span></a>
-<a name="660"><span class="lineNum">     660 </span><span class="lineCov">   19512600 :                 from=1</span></a>
-<a name="661"><span class="lineNum">     661 </span><span class="lineCov">   19512600 :                 to=1&lt;&lt;move.diff.rawValue</span></a>
-<a name="662"><span class="lineNum">     662 </span><span class="lineCov">   19512600 :                 self.iteratorMask = move.mask</span></a>
-<a name="663"><span class="lineNum">     663 </span><span class="lineCov">   36313360 :             } else {</span></a>
-<a name="664"><span class="lineNum">     664 </span><span class="lineCov">   16800760 :                 from = (1&lt;&lt;abs(move.diff.rawValue))</span></a>
-<a name="665"><span class="lineNum">     665 </span><span class="lineCov">   16800760 :                 to = 1</span></a>
-<a name="666"><span class="lineNum">     666 </span><span class="lineCov">   16800760 :                 self.iteratorMask = move.mask&gt;&gt;abs(move.diff.rawValue)</span></a>
-<a name="667"><span class="lineNum">     667 </span><span class="lineCov">   36313360 :             }</span></a>
-<a name="668"><span class="lineNum">     668 </span><span class="lineCov">   36313360 :             self.piecesToMove = move.piecesToMove</span></a>
-<a name="669"><span class="lineNum">     669 </span><span class="lineCov">   36313360 : </span></a>
-<a name="670"><span class="lineNum">     670 </span><span class="lineCov">   36313360 :         }</span></a>
-<a name="671"><span class="lineNum">     671 </span><span class="lineCov">  122753621 :         mutating func next() -&gt; UInt64? {</span></a>
-<a name="672"><span class="lineNum">     672 </span><span class="lineCov">  122753621 :             guard iteratorMask &gt; 0</span></a>
-<a name="673"><span class="lineNum">     673 </span><span class="lineCov">  122753621 :                 else { return nil }</span></a>
-<a name="674"><span class="lineNum">     674 </span><span class="lineCov">   86440261 :             from&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
-<a name="675"><span class="lineNum">     675 </span><span class="lineCov">   86440261 :             to&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
-<a name="676"><span class="lineNum">     676 </span><span class="lineCov">   86440261 :             iteratorMask&gt;&gt;=iteratorMask.trailingZeroBitCount</span></a>
-<a name="677"><span class="lineNum">     677 </span><span class="lineCov">   86440261 :             iteratorMask^=1</span></a>
-<a name="678"><span class="lineNum">     678 </span><span class="lineCov">   86440261 : </span></a>
-<a name="679"><span class="lineNum">     679 </span><span class="lineCov">   86440261 :             return (piecesToMove|to)&amp;(~from)</span></a>
-<a name="680"><span class="lineNum">     680 </span><span class="lineCov">  122753621 :         }</span></a>
+<a name="657"><span class="lineNum">     657 </span><span class="lineCov">   36055696 :         init(_ move: Move) {</span></a>
+<a name="658"><span class="lineNum">     658 </span><span class="lineCov">   36055696 :             // mask has the pieces in original places</span></a>
+<a name="659"><span class="lineNum">     659 </span><span class="lineCov">   36055696 :             if move.diff.rawValue&gt;0 {</span></a>
+<a name="660"><span class="lineNum">     660 </span><span class="lineCov">   19614720 :                 from=1</span></a>
+<a name="661"><span class="lineNum">     661 </span><span class="lineCov">   19614720 :                 to=1&lt;&lt;move.diff.rawValue</span></a>
+<a name="662"><span class="lineNum">     662 </span><span class="lineCov">   19614720 :                 self.iteratorMask = move.mask</span></a>
+<a name="663"><span class="lineNum">     663 </span><span class="lineCov">   36055696 :             } else {</span></a>
+<a name="664"><span class="lineNum">     664 </span><span class="lineCov">   16440976 :                 from = (1&lt;&lt;abs(move.diff.rawValue))</span></a>
+<a name="665"><span class="lineNum">     665 </span><span class="lineCov">   16440976 :                 to = 1</span></a>
+<a name="666"><span class="lineNum">     666 </span><span class="lineCov">   16440976 :                 self.iteratorMask = move.mask&gt;&gt;abs(move.diff.rawValue)</span></a>
+<a name="667"><span class="lineNum">     667 </span><span class="lineCov">   36055696 :             }</span></a>
+<a name="668"><span class="lineNum">     668 </span><span class="lineCov">   36055696 :             self.piecesToMove = move.piecesToMove</span></a>
+<a name="669"><span class="lineNum">     669 </span><span class="lineCov">   36055696 : </span></a>
+<a name="670"><span class="lineNum">     670 </span><span class="lineCov">   36055696 :         }</span></a>
+<a name="671"><span class="lineNum">     671 </span><span class="lineCov">  118183473 :         mutating func next() -&gt; UInt64? {</span></a>
+<a name="672"><span class="lineNum">     672 </span><span class="lineCov">  118183473 :             guard iteratorMask &gt; 0</span></a>
+<a name="673"><span class="lineNum">     673 </span><span class="lineCov">  118183473 :                 else { return nil }</span></a>
+<a name="674"><span class="lineNum">     674 </span><span class="lineCov">   82127777 :             from&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
+<a name="675"><span class="lineNum">     675 </span><span class="lineCov">   82127777 :             to&lt;&lt;=iteratorMask.trailingZeroBitCount</span></a>
+<a name="676"><span class="lineNum">     676 </span><span class="lineCov">   82127777 :             iteratorMask&gt;&gt;=iteratorMask.trailingZeroBitCount</span></a>
+<a name="677"><span class="lineNum">     677 </span><span class="lineCov">   82127777 :             iteratorMask^=1</span></a>
+<a name="678"><span class="lineNum">     678 </span><span class="lineCov">   82127777 : </span></a>
+<a name="679"><span class="lineNum">     679 </span><span class="lineCov">   82127777 :             return (piecesToMove|to)&amp;(~from)</span></a>
+<a name="680"><span class="lineNum">     680 </span><span class="lineCov">  118183473 :         }</span></a>
 <a name="681"><span class="lineNum">     681 </span>            :     }</a>
 <a name="682"><span class="lineNum">     682 </span>            : }</a>
 </pre>
