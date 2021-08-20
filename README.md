@@ -3,7 +3,7 @@ Tiralabra 2021
 
 [![Build Status](https://www.travis-ci.com/tuureilmarinen/Checkers.svg?branch=master)](https://www.travis-ci.com/tuureilmarinen/Checkers)
 
-[CheckersLibrary](https://github.com/tuureilmarinen/CheckersLibray)
+[CheckersLibrary](https://github.com/tuureilmarinen/CheckersLibrary)
 
 [CLI for testing the algorithms.](https://github.com/tuureilmarinen/CheckersAppCLI)
 
@@ -30,5 +30,8 @@ OPTIONS:
 ./CheckersAppCLI random random --fen B:W18,19,21,23,24,26,29,30,31,32:B1,2,3,4,6,7,9,10,11,12 
 B:W18,19,21,23,24,26,29,30,31,32:B1,2,3,4,6,7,9,10,11,12
 ```
+
+For detailed documentation see: (./docs/sources/)
+For deteailed documentation about tests see: (./docs/tests/)
 
 Ks. ./hy-docs/maarittely.md
