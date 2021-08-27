@@ -36,3 +36,9 @@ Lisätty tarvittava dokumentaatio.
 Lisätty linkkejä CodeCov:iin ja sama informaatio testikattavuudesta löytyy myös itse repositorystä.
 Yksityiskohtainen kuvaus testeistä lisätty /docs/tests/.
 Lisätty testejä.
+
+# Viikkoraportti 6
+Lisätty paljon testejä.
+Aloitettu GameState-structin pilkkominen osiin.
+Aloitettu esimerkkisovelluksen toteuttaminen SwiftUI:lla.
+Käytettyjä tunteja: liikaa.
