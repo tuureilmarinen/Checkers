@@ -9,5 +9,5 @@ public protocol MinMaxHeuristicEvaluator
 ### evaluate(\_:​)
 
 ``` swift
-static func evaluate(_: GameState) -> Double
+func evaluate(_: GameState) -> Double
 ```

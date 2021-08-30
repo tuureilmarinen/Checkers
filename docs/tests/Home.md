@@ -4,8 +4,11 @@
   - [CheckersLibraryTests](/CheckersLibraryTests)
   - [CheckersMinMaxPlayerTests](/CheckersMinMaxPlayerTests)
   - [CheckersUtilsTests](/CheckersUtilsTests)
+  - [EightByEightBoardTests](/EightByEightBoardTests)
   - [GameStateTestsTests](/GameStateTestsTests)
+  - [PieceSetTests](/PieceSetTests)
   - [PortableDraughtsNotationTests](/PortableDraughtsNotationTests)
+  - [WeightedPieceCountRatioEvaluatorTest](/WeightedPieceCountRatioEvaluatorTest)
 
 # Global Functions
 

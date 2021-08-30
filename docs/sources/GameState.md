@@ -4,85 +4,80 @@ GameState contains state of the board.
 It provides a way to get all legal moves from certain state.
 
 ``` swift
-public struct GameState: Hashable 
+public struct GameState: Hashable, Codable, CustomStringConvertible, Identifiable 
 ```
 
 ## Inheritance
 
-`Hashable`
+`Codable`, `CustomStringConvertible`, `Hashable`, `Identifiable`
+
+## Initializers
+
+### `init(dump:)`
+
+``` swift
+public init(dump: String) throws 
+```
+
+### `init(blackMen:blackKings:whiteMen:whiteKings:blackTurn:)`
+
+The state of the board is represented by a bitboard.
+Bit at the least significant position represents square at the leftmost square on the topmost square.
+
+``` swift
+public init(blackMen: UInt64, blackKings: UInt64, whiteMen: UInt64, whiteKings: UInt64, blackTurn: Bool) 
+```
+
+#### Parameters
+
+  - blackMen: Bitboard of the black men on the board.
+  - blackKings: Bitboard of the black men on the board.
+  - whiteMen: Bitboard of the black men on the board.
+  - whiteKings: Bitboard of the black men on the board.
+  - blackTurn: True, if the player with the black pieces should make the next move.
+
+### `init(board:turn:)`
+
+``` swift
+public init(board: EightByEightBoard, turn: CheckersColor) 
+```
+
+### `init(board:blackTurn:)`
+
+``` swift
+public init(board: EightByEightBoard, blackTurn: Bool) 
+```
+
+### `init(fen:)`
+
+``` swift
+public init(fen: String) throws 
+```
 
 ## Properties
 
-### `blackMen`
+### `board`
 
 ``` swift
-public var blackMen: UInt64
+public var board: EightByEightBoard
 ```
 
-### `blackKings`
+### `id`
 
 ``` swift
-public var blackKings: UInt64
+public var id: String 
 ```
 
-### `whiteMen`
+### `description`
 
 ``` swift
-public var whiteMen: UInt64
+public var description: String 
 ```
 
-### `whiteKings`
+### `valid`
 
 ``` swift
-public var whiteKings: UInt64
-```
-
-### `edges`
-
-``` swift
-public static let edges: UInt64 = 18411139144890810879
-```
-
-### `notEdges`
-
-~edges
-
-``` swift
-public static let notEdges: UInt64 = 35604928818740736
-```
-
-### `rightEdge`
-
-``` swift
-public static let rightEdge: UInt64 = 9259542123273814144
-```
-
-### `leftEdge`
-
-``` swift
-public static let leftEdge: UInt64 = 72340172838076673
-```
-
-### `whiteEndMask`
-
-``` swift
-public static let whiteEndMask: UInt64 = 18374686479671623680
-```
-
-### `blackEndMask`
-
-0b0000\_0000\_0000\_.......1111\_1111
-
-``` swift
-public static let blackEndMask: UInt64 = 255
-```
-
-### `darkSquares`
-
-0b0101\_0101\_1010\_1010\_0101\_0101\_1010\_1010\_0101\_0101\_1010\_1010\_0101\_0101\_1010\_1010
-
-``` swift
-public static let darkSquares: UInt64 = 6172840429334713770
+public var valid: Bool 
 ```
 
 ### `playableSquares`
@@ -90,43 +85,17 @@ public static let darkSquares: UInt64 = 6172840429334713770
 ie. dark squares
 
 ``` swift
-public static let playableSquares: UInt64 = 6172840429334713770
+public static var playableSquares: PieceSet 
 ```
 
 ### `defaultStart`
 
+Default starting position.
+Both players have 12 pieces located on the dark squares closest to player's own side.
+Black moves first.
+
 ``` swift
 public static let defaultStart 
-```
-
-### `blackPieces`
-
-``` swift
-public var blackPieces: UInt64 
-```
-
-### `whitePieces`
-
-``` swift
-public var whitePieces: UInt64 
-```
-
-### `allPieces`
-
-``` swift
-public var allPieces: UInt64 
-```
-
-### `blackTurn`
-
-``` swift
-public var blackTurn: Bool
-```
-
-### `whiteTurn`
-
-``` swift
-public var whiteTurn: Bool 
 ```
 
 ### `turn`
@@ -175,8 +144,51 @@ Movable pieces are determined by
 
 ## Methods
 
-### `piece(at:)`
+### `encode(to:)`
 
 ``` swift
-public func piece(at: Int) -> CheckersPiece 
+public func encode(to: String.Type) -> String 
+```
+
+### `pieces(_:except:)`
+
+``` swift
+public func pieces(_ selection: CheckersPieceSelector, except: CheckersPieceSelector? = nil) -> PieceSet 
+```
+
+### `number(of:)`
+
+``` swift
+public func number(of pieces: CheckersPieceSelector) -> Int 
+```
+
+### `encode(to:)`
+
+``` swift
+public func encode(to: PortableDraughtsNotation.Type) -> String 
+```
+
+### `random(turn:blackMen:whiteMen:blackKings:whiteKings:)`
+
+``` swift
+public static func random(
+        turn: CheckersColor?=nil,
+        blackMen: Int=0,
+        whiteMen: Int=0,
+        blackKings: Int=0,
+        whiteKings: Int=0
+    ) -> GameState 
+```
+
+### `random(turn:blackMen:whiteMen:blackKings:whiteKings:using:)`
+
+``` swift
+public static func random<T>(
+        turn: CheckersColor?=nil,
+        blackMen: Int=0,
+        whiteMen: Int=0,
+        blackKings: Int=0,
+        whiteKings: Int=0,
+        using: inout T
+    ) -> GameState where T: RandomNumberGenerator 
 ```

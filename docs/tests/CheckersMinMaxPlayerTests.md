@@ -14,6 +14,7 @@ final class CheckersMinMaxPlayerTests: XCTestCase
 
 ``` swift
 static var allTests = [
+        ("testCache", testCache),
         ("testPerformance", testPerformance),
         ("testProvidesLegalMove", testProvidesLegalMove),
         ("testMinMaxWinsIfWinCanForcedInSearchDepth", testMinMaxWinsIfWinCanForcedInSearchDepth)
@@ -40,10 +41,72 @@ ie. it does not return illegal moves.
 func testProvidesLegalMove() 
 ```
 
+### `testCache()`
+
+Tests cache.
+
+``` swift
+func testCache() 
+```
+
+  - found values should be stored in cache
+
+  - if value is in the cache, it should be returned
+
+  - best found move should be the one stored in cache
+
+### `testValueOutsideOfAcceptableCacheDepthIsNotReturnedFromCache()`
+
+``` swift
+func testValueOutsideOfAcceptableCacheDepthIsNotReturnedFromCache() 
+```
+
+### `testValueWithinAcceptableCacheDepthIsReturnedFromCache()`
+
+``` swift
+func testValueWithinAcceptableCacheDepthIsReturnedFromCache() 
+```
+
 ### `testMinMaxWinsIfWinCanForcedInSearchDepth()`
 
 Tests wheter player wins from state from which it can force win.
 
 ``` swift
 func testMinMaxWinsIfWinCanForcedInSearchDepth() 
+```
+
+### `testPerformanceProvideMove5()`
+
+``` swift
+func testPerformanceProvideMove5() throws 
+```
+
+### `testPerformanceProvideMove7()`
+
+``` swift
+func testPerformanceProvideMove7() throws 
+```
+
+### `testPerformanceProvideMove9()`
+
+``` swift
+func testPerformanceProvideMove9() throws 
+```
+
+### `testPerformanceProvideMove11()`
+
+``` swift
+func testPerformanceProvideMove11() throws 
+```
+
+### `testPerformanceProvideMove13()`
+
+``` swift
+func testPerformanceProvideMove13() throws 
+```
+
+### `testPerformanceProvideMove15()`
+
+``` swift
+func testPerformanceProvideMove15() throws 
 ```

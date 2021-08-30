@@ -10,6 +10,14 @@ public struct PieceCountRatioEvaluator: MinMaxHeuristicEvaluator
 
 [`MinMaxHeuristicEvaluator`](/MinMaxHeuristicEvaluator)
 
+## Initializers
+
+### `init()`
+
+``` swift
+public init() 
+```
+
 ## Methods
 
 ### `evaluate(_:)`
@@ -21,7 +29,7 @@ if number of black pieces on the board is greater.
 Complexity is O(1).
 
 ``` swift
-public static func evaluate(_ state: GameState) -> Double 
+public func evaluate(_ state: GameState) -> Double 
 ```
 
 #### Parameters

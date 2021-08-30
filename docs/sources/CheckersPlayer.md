@@ -9,7 +9,7 @@ public protocol CheckersPlayer
 ### provideMove(\_:​)
 
 ``` swift
-func provideMove(_ state: GameState) -> GameState?
+mutating func provideMove(_ state: GameState) -> GameState?
 ```
 
 ### name

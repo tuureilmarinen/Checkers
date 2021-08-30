@@ -6,6 +6,18 @@ public enum CheckersUtils
 
 ## Methods
 
+### `encode(dump:)`
+
+``` swift
+public static func encode(dump state: GameState) -> String 
+```
+
+### `decode(dump:)`
+
+``` swift
+public static func decode(dump: String) -> GameState? 
+```
+
 ### `getMove(_:_:)`
 
 ``` swift
@@ -21,23 +33,5 @@ public static func getMoves(_ state: GameState) -> [Int: [CheckersMove]]
 ### `getSetBitIndexes(_:)`
 
 ``` swift
-public static func getSetBitIndexes(_ mask: UInt64) -> [Int] 
-```
-
-### `getRandomBitsSet(_:_:)`
-
-``` swift
-public static func getRandomBitsSet<T: FixedWidthInteger>(_ choices: T, _ count: Int) -> T 
-```
-
-### `getRandomGameState(turn:blackMen:whiteMen:blackKings:whiteKings:)`
-
-``` swift
-public static func getRandomGameState(
-        turn: CheckersColor?=nil,
-        blackMen: Int=0,
-        whiteMen: Int=0,
-        blackKings: Int=0,
-        whiteKings: Int=0
-    ) -> GameState 
+public static func getSetBitIndexes<T: FixedWidthInteger&BinaryInteger>(_ mask: T) -> [Int] 
 ```

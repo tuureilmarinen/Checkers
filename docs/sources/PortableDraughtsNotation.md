@@ -20,14 +20,14 @@ public static func IntToPDN(_ index: Int) -> Int
 public static func PDNToInt(_ pdnSquareNumber: Int) -> Int 
 ```
 
-### `stateToFen(_:)`
+### `encode(_:)`
 
 ``` swift
-public static func stateToFen(_ state: GameState) -> String 
+public static func encode(_ state: GameState) -> String 
 ```
 
-### `PDNfenToGameState(_:)`
+### `decode(_:)`
 
 ``` swift
-public static func PDNfenToGameState(_ fen: String?) -> GameState? 
+public static func decode(_ fen: String?) -> GameState? 
 ```

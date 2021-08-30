@@ -18,7 +18,19 @@ public struct CheckersDeterministicRandomPlayer: CheckersPlayer
 public init() 
 ```
 
+### `init(seed:)`
+
+``` swift
+public init(seed: Int = 1) 
+```
+
 ## Properties
+
+### `defaultSeed`
+
+``` swift
+public static var defaultSeed: Int = 1
+```
 
 ### `name`
 
@@ -29,7 +41,7 @@ public var name: String
 ### `seed`
 
 ``` swift
-public var seed: UInt64 = 1
+public var seed: Int
 ```
 
 ## Methods
@@ -37,5 +49,5 @@ public var seed: UInt64 = 1
 ### `provideMove(_:)`
 
 ``` swift
-public func provideMove(_ state: GameState) -> GameState? 
+public mutating func provideMove(_ state: GameState) -> GameState? 
 ```

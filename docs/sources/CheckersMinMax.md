@@ -18,10 +18,27 @@ required public init()
 
 ## Properties
 
-### `knownStateValues`
+### `optimalKnownMove`
+
+When key state has black turn, value state has smallest possible value
+if key state has white turn, value state has maximum possible value
 
 ``` swift
-public var knownStateValues: [GameState: (Double, GameState?)] 
+public var optimalKnownMove: [GameState: GameState] = [:]
+```
+
+### `knownValues`
+
+``` swift
+public var knownValues: [GameState: Double] = [:]
+```
+
+### `guessDepth`
+
+How many turns had been evaluated when determining the best move without finding a way to sure win.
+
+``` swift
+public var guessDepth: [GameState: Int] = [:]
 ```
 
 ### `searchDepth`
@@ -43,7 +60,7 @@ public var cacheDepth = 5
 ### `evaluator`
 
 ``` swift
-public var evaluator: MinMaxHeuristicEvaluator.Type = PieceCountRatioEvaluator.self
+public var evaluator: MinMaxHeuristicEvaluator
 ```
 
 ### `name`

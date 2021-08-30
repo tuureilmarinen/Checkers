@@ -1,37 +1,35 @@
 # CheckersPiece
 
 ``` swift
-public enum CheckersPiece 
+public enum CheckersPiece: Int 
 ```
+
+## Inheritance
+
+`Int`
 
 ## Enumeration Cases
-
-### `WhiteKing`
-
-``` swift
-case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
-```
 
 ### `BlackMan`
 
 ``` swift
-case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
-```
-
-### `WhiteMan`
-
-``` swift
-case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
-```
-
-### `Empty`
-
-``` swift
-case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
+case BlackMan = 1
 ```
 
 ### `BlackKing`
 
 ``` swift
-case BlackMan, BlackKing, WhiteMan, WhiteKing, Empty
+case BlackKing = 2
+```
+
+### `WhiteMan`
+
+``` swift
+case WhiteMan = 3
+```
+
+### `WhiteKing`
+
+``` swift
+case WhiteKing = 4
 ```

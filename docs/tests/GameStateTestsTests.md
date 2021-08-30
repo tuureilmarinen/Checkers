@@ -21,6 +21,44 @@ static var allTests = [
 
 ## Methods
 
+### `testCorrectAmountOfChildren()`
+
+``` swift
+func testCorrectAmountOfChildren() 
+```
+
+### `testPiecesShouldNotOverlap()`
+
+``` swift
+func testPiecesShouldNotOverlap() 
+```
+
+### `testShouldMoveOnlyOnePiece()`
+
+``` swift
+func testShouldMoveOnlyOnePiece() 
+```
+
+### `testEncode()`
+
+``` swift
+func testEncode() 
+```
+
+### `testDecode()`
+
+``` swift
+func testDecode() 
+```
+
+### `testInternalStateValidator()`
+
+Tests if GameState can validate itself correctly
+
+``` swift
+func testInternalStateValidator() 
+```
+
 ### `testPiecesShouldStayInDarkSquares()`
 
 Tests if pieces stay in the squares playable in the english draughts.
@@ -42,6 +80,12 @@ func testPieceCount()
   - The player in turn does not lose pieces during his own turn.
 
   - Men can turn into kings only during players own turn.
+
+### `testNumberOf()`
+
+``` swift
+func testNumberOf() 
+```
 
 ### `testMenTurnIntoKings()`
 
