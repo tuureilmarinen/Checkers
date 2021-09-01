@@ -4,3 +4,6 @@
 [submodule "CheckersAppCLI"]
 	path = CheckersAppCLI
 	url = https://github.com/tuureilmarinen/CheckersAppCLI.git
+[submodule "CheckersLibraryDebugger"]
+	path = CheckersLibraryDebugger
+	url = git@github.com:tuureilmarinen/CheckersLibraryDebugger.git

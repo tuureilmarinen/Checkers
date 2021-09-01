@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-08-30 17:35:41</td>
+            <td class="headerValue">2021-09-01 20:02:37</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -70,12 +70,12 @@
 <a name="8"><span class="lineNum">       8 </span>            : import Foundation</a>
 <a name="9"><span class="lineNum">       9 </span>            : </a>
 <a name="10"><span class="lineNum">      10 </span>            : public struct PseudoRandomNumberGenerator: RandomNumberGenerator {</a>
-<a name="11"><span class="lineNum">      11 </span><span class="lineCov">        203 :     public init(seed: Int) {</span></a>
-<a name="12"><span class="lineNum">      12 </span><span class="lineCov">        203 :         srand48(seed)</span></a>
-<a name="13"><span class="lineNum">      13 </span><span class="lineCov">        203 :         }</span></a>
-<a name="14"><span class="lineNum">      14 </span><span class="lineCov">        488 :     public func next() -&gt; UInt64 {</span></a>
-<a name="15"><span class="lineNum">      15 </span><span class="lineCov">        488 :         return UInt64(drand48() * Double(UInt64.max))</span></a>
-<a name="16"><span class="lineNum">      16 </span><span class="lineCov">        488 :     }</span></a>
+<a name="11"><span class="lineNum">      11 </span><span class="lineCov">        101 :     public init(seed: Int) {</span></a>
+<a name="12"><span class="lineNum">      12 </span><span class="lineCov">        101 :         srand48(seed)</span></a>
+<a name="13"><span class="lineNum">      13 </span><span class="lineCov">        101 :         }</span></a>
+<a name="14"><span class="lineNum">      14 </span><span class="lineCov">        277 :     public func next() -&gt; UInt64 {</span></a>
+<a name="15"><span class="lineNum">      15 </span><span class="lineCov">        277 :         return UInt64(drand48() * Double(UInt64.max))</span></a>
+<a name="16"><span class="lineNum">      16 </span><span class="lineCov">        277 :     }</span></a>
 <a name="17"><span class="lineNum">      17 </span>            : }</a>
 <a name="18"><span class="lineNum">      18 </span>            : </a>
 <a name="19"><span class="lineNum">      19 </span>            : public struct RandomUtils {</a>

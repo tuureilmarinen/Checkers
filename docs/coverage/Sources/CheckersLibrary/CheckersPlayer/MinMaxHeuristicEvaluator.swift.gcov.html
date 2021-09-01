@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-08-30 17:35:41</td>
+            <td class="headerValue">2021-09-01 20:02:37</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -106,25 +106,25 @@
 <a name="44"><span class="lineNum">      44 </span><span class="lineCov">         51 :         self.remainingKings=remainingKings</span></a>
 <a name="45"><span class="lineNum">      45 </span><span class="lineCov">         51 :     }</span></a>
 <a name="46"><span class="lineNum">      46 </span>            : </a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineCov">    2825905 :     public func evaluate(_ state: GameState) -&gt; Double {</span></a>
-<a name="48"><span class="lineNum">      48 </span><span class="lineCov">    2825905 :         if state.number(of: .Black)==0 {</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">    3120639 :     public func evaluate(_ state: GameState) -&gt; Double {</span></a>
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov">    3120639 :         if state.number(of: .Black)==0 {</span></a>
 <a name="49"><span class="lineNum">      49 </span><span class="lineCov">          1 :             return Double(state.number(of: .WhiteKings)) * remainingKings +</span></a>
 <a name="50"><span class="lineNum">      50 </span><span class="lineCov">          1 :                 Double(state.number(of: .WhiteMen))*remainingMen</span></a>
-<a name="51"><span class="lineNum">      51 </span><span class="lineCov">    2825904 :         } else if state.number(of: .White)==0 {</span></a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">    3120638 :         } else if state.number(of: .White)==0 {</span></a>
 <a name="52"><span class="lineNum">      52 </span><span class="lineCov">          1 :             return -1 * (Double(state.number(of: .BlackKings)) * remainingKings +</span></a>
 <a name="53"><span class="lineNum">      53 </span><span class="lineCov">          1 :                 Double(state.number(of: .BlackMen))*remainingMen)</span></a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov">    2825903 :         } else if state.number(of: .Black)&gt;state.number(of: .White) {</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">    1093951 :             let pieceRatio = Double(state.number(of: .Black))/Double(state.number(of: .White))</span></a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">    1093951 :             let kingRatio = Double(state.number(of: .BlackKings))/Double(max(state.number(of: .BlackMen), 1))</span></a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">    1093951 :             let turnRatio: Double = state.turn == .Black ? 1 : 0</span></a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">    1093951 :             return -1*(pieceRatio*piece+kingRatio*king+turnRatio*turn-1)</span></a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">    1731952 :         } else {</span></a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">    1731952 :             let pieceRatio = Double(state.number(of: .White))/Double(state.number(of: .Black))</span></a>
-<a name="61"><span class="lineNum">      61 </span><span class="lineCov">    1731952 :             let kingRatio = Double(state.number(of: .WhiteKings)) /</span></a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">    1731952 :                 Double(max(state.number(of: .WhiteMen), 1))</span></a>
-<a name="63"><span class="lineNum">      63 </span><span class="lineCov">    1731952 :             let turnRatio: Double = state.turn == .White ? 1 : 0</span></a>
-<a name="64"><span class="lineNum">      64 </span><span class="lineCov">    1731952 :             return (pieceRatio*piece)+(kingRatio*king)+(turnRatio*turn)-1</span></a>
-<a name="65"><span class="lineNum">      65 </span><span class="lineCov">    1731952 :         }</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">    3120637 :         } else if state.number(of: .Black)&gt;state.number(of: .White) {</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">    1142316 :             let pieceRatio = Double(state.number(of: .Black))/Double(state.number(of: .White))</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">    1142316 :             let kingRatio = Double(state.number(of: .BlackKings))/Double(max(state.number(of: .BlackMen), 1))</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">    1142316 :             let turnRatio: Double = state.turn == .Black ? 1 : 0</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">    1142316 :             return -1*(pieceRatio*piece+kingRatio*king+turnRatio*turn-1)</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">    1978321 :         } else {</span></a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">    1978321 :             let pieceRatio = Double(state.number(of: .White))/Double(state.number(of: .Black))</span></a>
+<a name="61"><span class="lineNum">      61 </span><span class="lineCov">    1978321 :             let kingRatio = Double(state.number(of: .WhiteKings)) /</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">    1978321 :                 Double(max(state.number(of: .WhiteMen), 1))</span></a>
+<a name="63"><span class="lineNum">      63 </span><span class="lineCov">    1978321 :             let turnRatio: Double = state.turn == .White ? 1 : 0</span></a>
+<a name="64"><span class="lineNum">      64 </span><span class="lineCov">    1978321 :             return (pieceRatio*piece)+(kingRatio*king)+(turnRatio*turn)-1</span></a>
+<a name="65"><span class="lineNum">      65 </span><span class="lineCov">    1978321 :         }</span></a>
 <a name="66"><span class="lineNum">      66 </span><span class="lineNoCov">          0 :     }</span></a>
 <a name="67"><span class="lineNum">      67 </span>            : }</a>
 </pre>

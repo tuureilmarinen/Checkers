@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-08-30 17:35:41</td>
+            <td class="headerValue">2021-09-01 20:02:37</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">12</td>
@@ -75,22 +75,22 @@
 <a name="13"><span class="lineNum">      13 </span><span class="lineNoCov">          0 :     }</span></a>
 <a name="14"><span class="lineNum">      14 </span>            : </a>
 <a name="15"><span class="lineNum">      15 </span>            :     public var pieces: UInt64</a>
-<a name="16"><span class="lineNum">      16 </span><span class="lineCov">   22607683 :     public var count: Int {</span></a>
-<a name="17"><span class="lineNum">      17 </span><span class="lineCov">   22607683 :         return pieces.nonzeroBitCount</span></a>
-<a name="18"><span class="lineNum">      18 </span><span class="lineCov">   22607683 :     }</span></a>
-<a name="19"><span class="lineNum">      19 </span><span class="lineCov"> 3442273711 :     public init(_ pieces: UInt64) {</span></a>
-<a name="20"><span class="lineNum">      20 </span><span class="lineCov"> 3442273711 :         self.pieces = pieces</span></a>
-<a name="21"><span class="lineNum">      21 </span><span class="lineCov"> 3442273711 :     }</span></a>
-<a name="22"><span class="lineNum">      22 </span><span class="lineCov">  402560797 :     public init(_ indexes: [Int]) {</span></a>
-<a name="23"><span class="lineNum">      23 </span><span class="lineCov">  402560797 :         pieces=0</span></a>
-<a name="24"><span class="lineNum">      24 </span><span class="lineCov">  753874439 :         for i in indexes {</span></a>
-<a name="25"><span class="lineNum">      25 </span><span class="lineCov">  753874439 :             pieces|=UInt64(1)&lt;&lt;i</span></a>
-<a name="26"><span class="lineNum">      26 </span><span class="lineCov">  753874439 :         }</span></a>
-<a name="27"><span class="lineNum">      27 </span><span class="lineCov">  402560797 :     }</span></a>
+<a name="16"><span class="lineNum">      16 </span><span class="lineCov">   24965523 :     public var count: Int {</span></a>
+<a name="17"><span class="lineNum">      17 </span><span class="lineCov">   24965523 :         return pieces.nonzeroBitCount</span></a>
+<a name="18"><span class="lineNum">      18 </span><span class="lineCov">   24965523 :     }</span></a>
+<a name="19"><span class="lineNum">      19 </span><span class="lineCov"> 3747392691 :     public init(_ pieces: UInt64) {</span></a>
+<a name="20"><span class="lineNum">      20 </span><span class="lineCov"> 3747392691 :         self.pieces = pieces</span></a>
+<a name="21"><span class="lineNum">      21 </span><span class="lineCov"> 3747392691 :     }</span></a>
+<a name="22"><span class="lineNum">      22 </span><span class="lineCov">  435475659 :     public init(_ indexes: [Int]) {</span></a>
+<a name="23"><span class="lineNum">      23 </span><span class="lineCov">  435475659 :         pieces=0</span></a>
+<a name="24"><span class="lineNum">      24 </span><span class="lineCov">  822143893 :         for i in indexes {</span></a>
+<a name="25"><span class="lineNum">      25 </span><span class="lineCov">  822143893 :             pieces|=UInt64(1)&lt;&lt;i</span></a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineCov">  822143893 :         }</span></a>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">  435475659 :     }</span></a>
 <a name="28"><span class="lineNum">      28 </span>            : </a>
-<a name="29"><span class="lineNum">      29 </span><span class="lineCov">  171804968 :     public func and(not: PieceSet) -&gt; PieceSet {</span></a>
-<a name="30"><span class="lineNum">      30 </span><span class="lineCov">  171804968 :         return PieceSet(pieces &amp; ~not.pieces)</span></a>
-<a name="31"><span class="lineNum">      31 </span><span class="lineCov">  171804968 :     }</span></a>
+<a name="29"><span class="lineNum">      29 </span><span class="lineCov">  185507168 :     public func and(not: PieceSet) -&gt; PieceSet {</span></a>
+<a name="30"><span class="lineNum">      30 </span><span class="lineCov">  185507168 :         return PieceSet(pieces &amp; ~not.pieces)</span></a>
+<a name="31"><span class="lineNum">      31 </span><span class="lineCov">  185507168 :     }</span></a>
 <a name="32"><span class="lineNum">      32 </span>            : </a>
 <a name="33"><span class="lineNum">      33 </span><span class="lineNoCov">          0 :     public func and(_ and: PieceSet) -&gt; PieceSet {</span></a>
 <a name="34"><span class="lineNum">      34 </span><span class="lineNoCov">          0 :         return PieceSet(pieces &amp; and.pieces)</span></a>
@@ -100,28 +100,28 @@
 <a name="38"><span class="lineNum">      38 </span><span class="lineNoCov">          0 :         return PieceSet(pieces | other.pieces)</span></a>
 <a name="39"><span class="lineNum">      39 </span><span class="lineNoCov">          0 :     }</span></a>
 <a name="40"><span class="lineNum">      40 </span>            : </a>
-<a name="41"><span class="lineNum">      41 </span><span class="lineCov">  203469169 :     public var isEmpty: Bool {</span></a>
-<a name="42"><span class="lineNum">      42 </span><span class="lineCov">  203469169 :         return pieces==0</span></a>
-<a name="43"><span class="lineNum">      43 </span><span class="lineCov">  203469169 :     }</span></a>
+<a name="41"><span class="lineNum">      41 </span><span class="lineCov">  224689729 :     public var isEmpty: Bool {</span></a>
+<a name="42"><span class="lineNum">      42 </span><span class="lineCov">  224689729 :         return pieces==0</span></a>
+<a name="43"><span class="lineNum">      43 </span><span class="lineCov">  224689729 :     }</span></a>
 <a name="44"><span class="lineNum">      44 </span>            : </a>
 <a name="45"><span class="lineNum">      45 </span><span class="lineNoCov">          0 :     public var isNotEmpty: Bool {</span></a>
 <a name="46"><span class="lineNum">      46 </span><span class="lineNoCov">          0 :         return pieces&gt;0</span></a>
 <a name="47"><span class="lineNum">      47 </span><span class="lineNoCov">          0 :     }</span></a>
 <a name="48"><span class="lineNum">      48 </span>            : </a>
-<a name="49"><span class="lineNum">      49 </span><span class="lineCov">  273768315 :     static prefix func ~ (set: PieceSet) -&gt; PieceSet {</span></a>
-<a name="50"><span class="lineNum">      50 </span><span class="lineCov">  273768315 :         return PieceSet(~set.pieces)</span></a>
-<a name="51"><span class="lineNum">      51 </span><span class="lineCov">  273768315 :     }</span></a>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">  298901651 :     static prefix func ~ (set: PieceSet) -&gt; PieceSet {</span></a>
+<a name="50"><span class="lineNum">      50 </span><span class="lineCov">  298901651 :         return PieceSet(~set.pieces)</span></a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineCov">  298901651 :     }</span></a>
 <a name="52"><span class="lineNum">      52 </span>            : </a>
-<a name="53"><span class="lineNum">      53 </span><span class="lineCov"> 1216748054 :     static func &amp; (left: PieceSet, right: PieceSet) -&gt; PieceSet {</span></a>
-<a name="54"><span class="lineNum">      54 </span><span class="lineCov"> 1216748054 :         return PieceSet(left.pieces &amp; right.pieces)</span></a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov"> 1216748054 :     }</span></a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">  394617876 :     static func | (left: PieceSet, right: PieceSet) -&gt; PieceSet {</span></a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">  394617876 :         return PieceSet(left.pieces | right.pieces)</span></a>
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">  394617876 :     }</span></a>
+<a name="53"><span class="lineNum">      53 </span><span class="lineCov"> 1326082412 :     static func &amp; (left: PieceSet, right: PieceSet) -&gt; PieceSet {</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov"> 1326082412 :         return PieceSet(left.pieces &amp; right.pieces)</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov"> 1326082412 :     }</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">  429279960 :     static func | (left: PieceSet, right: PieceSet) -&gt; PieceSet {</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">  429279960 :         return PieceSet(left.pieces | right.pieces)</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">  429279960 :     }</span></a>
 <a name="59"><span class="lineNum">      59 </span>            : </a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">  302448330 :     static func &lt;&lt; (left: PieceSet, right: Int) -&gt; PieceSet {</span></a>
-<a name="61"><span class="lineNum">      61 </span><span class="lineCov">  302448330 :         return PieceSet(left.pieces&lt;&lt;right)</span></a>
-<a name="62"><span class="lineNum">      62 </span><span class="lineCov">  302448330 :     }</span></a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">  328268964 :     static func &lt;&lt; (left: PieceSet, right: Int) -&gt; PieceSet {</span></a>
+<a name="61"><span class="lineNum">      61 </span><span class="lineCov">  328268964 :         return PieceSet(left.pieces&lt;&lt;right)</span></a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">  328268964 :     }</span></a>
 <a name="63"><span class="lineNum">      63 </span><span class="lineNoCov">          0 :     static func &gt;&gt; (left: PieceSet, right: Int) -&gt; PieceSet {</span></a>
 <a name="64"><span class="lineNum">      64 </span><span class="lineNoCov">          0 :         return PieceSet(left.pieces&gt;&gt;right)</span></a>
 <a name="65"><span class="lineNum">      65 </span><span class="lineNoCov">          0 :     }</span></a>
@@ -130,18 +130,18 @@
 <a name="68"><span class="lineNum">      68 </span><span class="lineNoCov">          0 :         return PieceSet(left.pieces&lt;&lt;right.pieces)</span></a>
 <a name="69"><span class="lineNum">      69 </span><span class="lineNoCov">          0 :     }</span></a>
 <a name="70"><span class="lineNum">      70 </span>            : </a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">  104546471 :     public var indexes: [Int] {</span></a>
-<a name="72"><span class="lineNum">      72 </span><span class="lineCov">  104546471 :         var setBitIndexes: [Int] = []</span></a>
-<a name="73"><span class="lineNum">      73 </span><span class="lineCov">  104546471 :         var mask = self.pieces</span></a>
-<a name="74"><span class="lineNum">      74 </span><span class="lineCov">  104546471 :         var acc = 0</span></a>
-<a name="75"><span class="lineNum">      75 </span><span class="lineCov">  531141601 :         while mask&gt;0 {</span></a>
-<a name="76"><span class="lineNum">      76 </span><span class="lineCov">  426595130 :             setBitIndexes.append(mask.trailingZeroBitCount+acc)</span></a>
-<a name="77"><span class="lineNum">      77 </span><span class="lineCov">  426595130 :             acc += mask.trailingZeroBitCount</span></a>
-<a name="78"><span class="lineNum">      78 </span><span class="lineCov">  426595130 :             mask&gt;&gt;=mask.trailingZeroBitCount</span></a>
-<a name="79"><span class="lineNum">      79 </span><span class="lineCov">  426595130 :             mask^=1</span></a>
-<a name="80"><span class="lineNum">      80 </span><span class="lineCov">  426595130 :         }</span></a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">  104546471 :         return setBitIndexes</span></a>
-<a name="82"><span class="lineNum">      82 </span><span class="lineCov">  104546471 :     }</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">  114522985 :     public var indexes: [Int] {</span></a>
+<a name="72"><span class="lineNum">      72 </span><span class="lineCov">  114522985 :         var setBitIndexes: [Int] = []</span></a>
+<a name="73"><span class="lineNum">      73 </span><span class="lineCov">  114522985 :         var mask = self.pieces</span></a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">  114522985 :         var acc = 0</span></a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">  584048691 :         while mask&gt;0 {</span></a>
+<a name="76"><span class="lineNum">      76 </span><span class="lineCov">  469525706 :             setBitIndexes.append(mask.trailingZeroBitCount+acc)</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">  469525706 :             acc += mask.trailingZeroBitCount</span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">  469525706 :             mask&gt;&gt;=mask.trailingZeroBitCount</span></a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">  469525706 :             mask^=1</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineCov">  469525706 :         }</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">  114522985 :         return setBitIndexes</span></a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineCov">  114522985 :     }</span></a>
 <a name="83"><span class="lineNum">      83 </span>            :     subscript(index: Int) -&gt; Bool {</a>
 <a name="84"><span class="lineNum">      84 </span><span class="lineCov">        768 :         get {</span></a>
 <a name="85"><span class="lineNum">      85 </span><span class="lineCov">        768 :             return self.pieces&amp;(1&lt;&lt;index) &gt; 0</span></a>
